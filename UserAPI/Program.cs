@@ -155,6 +155,7 @@ app.UseCors("AllowWorkoutService");
 
 app.UseMiddleware<Shared.Helpers.ExceptionHandlingMiddleware>();
 app.UseRouting();
+app.MapGet("/", () => "Hello");
 
 app.UseHttpsRedirection();
 

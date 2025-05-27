@@ -1,0 +1,84 @@
+2025-05-21 00:12:17.529 +05:30 [INF] Now listening on: http://localhost:5145
+2025-05-21 00:12:17.761 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-21 00:12:17.762 +05:30 [INF] Hosting environment: Development
+2025-05-21 00:12:17.762 +05:30 [INF] Content root path: C:\Users\rohit.soni\Desktop\FitnessTracking\BackendApi\FitnessTrackingApp\WorkoutService
+2025-05-21 00:12:18.673 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/index.html - null null
+2025-05-21 00:12:19.061 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/index.html - 200 null text/html;charset=utf-8 389.9349ms
+2025-05-21 00:12:19.092 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-21 00:12:19.095 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 4.1329ms
+2025-05-21 00:12:19.160 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_vs/browserLink - null null
+2025-05-21 00:12:19.294 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 134.2909ms
+2025-05-21 00:12:19.371 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - null null
+2025-05-21 00:12:19.387 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.6226ms
+2025-05-21 00:15:27.760 +05:30 [INF] Now listening on: http://localhost:5145
+2025-05-21 00:15:27.992 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-21 00:15:27.992 +05:30 [INF] Hosting environment: Development
+2025-05-21 00:15:27.992 +05:30 [INF] Content root path: C:\Users\rohit.soni\Desktop\FitnessTracking\BackendApi\FitnessTrackingApp\WorkoutService
+2025-05-21 00:15:28.659 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/index.html - null null
+2025-05-21 00:15:29.042 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/index.html - 200 null text/html;charset=utf-8 385.1136ms
+2025-05-21 00:15:29.055 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-21 00:15:29.060 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 7.9337ms
+2025-05-21 00:15:29.148 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_vs/browserLink - null null
+2025-05-21 00:15:29.241 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 92.9992ms
+2025-05-21 00:15:29.318 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - null null
+2025-05-21 00:15:29.332 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.9024ms
+2025-05-21 00:37:00.366 +05:30 [INF] Now listening on: http://localhost:5145
+2025-05-21 00:37:00.633 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-21 00:37:00.633 +05:30 [INF] Hosting environment: Development
+2025-05-21 00:37:00.634 +05:30 [INF] Content root path: C:\Users\rohit.soni\Desktop\FitnessTracking\BackendApi\FitnessTrackingApp\WorkoutService
+2025-05-21 00:37:01.032 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/index.html - null null
+2025-05-21 00:37:01.361 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/index.html - 200 null text/html;charset=utf-8 333.1951ms
+2025-05-21 00:37:01.367 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-21 00:37:01.371 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 4.4483ms
+2025-05-21 00:37:01.421 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_vs/browserLink - null null
+2025-05-21 00:37:01.509 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 87.3863ms
+2025-05-21 00:37:01.577 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - null null
+2025-05-21 00:37:01.591 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.0341ms
+2025-05-21 14:14:22.659 +05:30 [INF] Now listening on: http://localhost:5145
+2025-05-21 14:14:23.182 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-21 14:14:23.183 +05:30 [INF] Hosting environment: Development
+2025-05-21 14:14:23.183 +05:30 [INF] Content root path: C:\Users\rohit.soni\Desktop\FitnessTracking\BackendApi\FitnessTrackingApp\WorkoutService
+2025-05-21 14:14:23.731 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/index.html - null null
+2025-05-21 14:14:24.333 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/index.html - 200 null text/html;charset=utf-8 604.0061ms
+2025-05-21 14:14:24.340 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-21 14:14:24.343 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_vs/browserLink - null null
+2025-05-21 14:14:24.343 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 3.8508ms
+2025-05-21 14:14:24.442 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 99.7297ms
+2025-05-21 14:14:25.822 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - null null
+2025-05-21 14:14:25.837 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.4972ms
+2025-05-21 14:15:01.149 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/today-workouts/8 - null null
+2025-05-21 14:15:01.157 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-05-21 14:15:01.159 +05:30 [INF] CORS policy execution successful.
+2025-05-21 14:15:01.163 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/today-workouts/8 - 204 null null 14.0066ms
+2025-05-21 14:15:01.167 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/today-workouts/8 - null null
+2025-05-21 14:15:01.169 +05:30 [INF] CORS policy execution successful.
+2025-05-21 14:15:01.779 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetTodayWorkouts (WorkoutService)'
+2025-05-21 14:15:01.823 +05:30 [INF] Route matched with {action = "GetTodayWorkouts", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodayWorkouts(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-21 14:15:05.167 +05:30 [INF] Executed DbCommand (186ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetTodayWorkoutByUserId @UserId=@p0
+2025-05-21 14:15:05.217 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-21 14:15:05.246 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetTodayWorkouts (WorkoutService) in 3412.4942ms
+2025-05-21 14:15:05.247 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetTodayWorkouts (WorkoutService)'
+2025-05-21 14:15:05.261 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/today-workouts/8 - 200 null application/json; charset=utf-8 4093.5408ms
+2025-05-21 15:52:53.043 +05:30 [INF] Now listening on: http://localhost:5145
+2025-05-21 15:52:53.345 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-21 15:52:53.345 +05:30 [INF] Hosting environment: Development
+2025-05-21 15:52:53.346 +05:30 [INF] Content root path: C:\Users\rohit.soni\Desktop\FitnessTracking\BackendApi\FitnessTrackingApp\WorkoutService
+2025-05-21 15:52:53.928 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/index.html - null null
+2025-05-21 15:52:54.400 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/index.html - 200 null text/html;charset=utf-8 474.3092ms
+2025-05-21 15:52:54.431 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-21 15:52:54.438 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 7.7082ms
+2025-05-21 15:52:54.483 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_vs/browserLink - null null
+2025-05-21 15:52:54.627 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 143.4833ms
+2025-05-21 15:52:54.708 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - null null
+2025-05-21 15:52:54.726 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.696ms
+2025-05-21 16:08:07.075 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-21 16:08:07.094 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-05-21 16:08:07.523 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-21 16:08:07.596 +05:30 [INF] Route matched with {action = "GetAll", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-21 16:08:12.142 +05:30 [INF] Executed DbCommand (108ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC GetAllWorkoutDetails
+2025-05-21 16:08:12.250 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.DTO.WorkoutWithUsernameDto, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-21 16:08:12.281 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService) in 4675.8534ms
+2025-05-21 16:08:12.283 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-21 16:08:12.299 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - 200 null application/json; charset=utf-8 5223.9999ms

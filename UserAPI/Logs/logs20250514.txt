@@ -1,0 +1,756 @@
+2025-05-14 12:11:33.981 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - null null
+2025-05-14 12:11:34.128 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:11:34.131 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - 204 null null 154.1626ms
+2025-05-14 12:11:34.135 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/8 - null null
+2025-05-14 12:11:34.142 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:11:34.845 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/8 - 401 null null 710.282ms
+2025-05-14 12:11:41.776 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/all-users - null null
+2025-05-14 12:11:41.777 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:11:41.777 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/all-users - 204 null null 1.0106ms
+2025-05-14 12:11:41.781 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/all-users - null null
+2025-05-14 12:11:41.782 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:11:41.890 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/all-users - 401 null null 109.4351ms
+2025-05-14 12:12:03.105 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/authentication/login - null null
+2025-05-14 12:12:03.112 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:12:03.112 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/authentication/login - 204 null null 7.917ms
+2025-05-14 12:12:03.122 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5227/api/authentication/login - application/json 54
+2025-05-14 12:12:03.153 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:12:03.162 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.AuthenticationController.Login (UserAPI)'
+2025-05-14 12:12:03.177 +05:30 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(UserAPI.Models.DTOs.LoginUserDto) on controller UserAPI.Controllers.AuthenticationController (UserAPI).
+2025-05-14 12:12:03.660 +05:30 [INF] Executed DbCommand (177ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[createdAt], [u].[email], [u].[fitnessGoal], [u].[IsActive], [u].[OtpCode], [u].[OtpExpiry], [u].[passwordHash], [u].[ProfileUrl], [u].[role], [u].[userName]
+FROM [Users] AS [u]
+WHERE [u].[userName] = @__username_0
+2025-05-14 12:12:04.120 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-14 12:12:04.124 +05:30 [INF] Executed action UserAPI.Controllers.AuthenticationController.Login (UserAPI) in 945.4519ms
+2025-05-14 12:12:04.124 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.AuthenticationController.Login (UserAPI)'
+2025-05-14 12:12:04.124 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5227/api/authentication/login - 200 null application/json; charset=utf-8 1002.3127ms
+2025-05-14 12:12:08.088 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/all-users - null null
+2025-05-14 12:12:08.088 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:12:08.088 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/all-users - 204 null null 0.3191ms
+2025-05-14 12:12:08.090 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/all-users - null null
+2025-05-14 12:12:08.090 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:12:08.093 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.GetAllUsers (UserAPI)'
+2025-05-14 12:12:08.094 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers() on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:12:08.164 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetAllUsers
+2025-05-14 12:12:08.166 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserAPI.Models.User, UserAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-14 12:12:08.167 +05:30 [INF] Executed action UserAPI.Controllers.UserController.GetAllUsers (UserAPI) in 73.5767ms
+2025-05-14 12:12:08.168 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.GetAllUsers (UserAPI)'
+2025-05-14 12:12:08.168 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/all-users - 200 null application/json; charset=utf-8 78.3706ms
+2025-05-14 12:12:15.662 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - null null
+2025-05-14 12:12:15.663 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:12:15.664 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - 204 null null 1.6752ms
+2025-05-14 12:12:15.666 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/8 - null null
+2025-05-14 12:12:15.666 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:12:15.668 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:12:15.669 +05:30 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:12:15.697 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetUserById @UserId = @p0
+2025-05-14 12:12:15.698 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-14 12:12:15.699 +05:30 [INF] Executed action UserAPI.Controllers.UserController.GetById (UserAPI) in 29.8966ms
+2025-05-14 12:12:15.699 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:12:15.699 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/8 - 200 null application/json; charset=utf-8 33.1761ms
+2025-05-14 12:12:30.555 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - null null
+2025-05-14 12:12:30.555 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:12:30.556 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - 204 null null 1.265ms
+2025-05-14 12:12:30.558 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - application/json 118
+2025-05-14 12:12:30.558 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:12:30.563 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:12:30.584 +05:30 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateUser(Int32, UserAPI.Models.DTOs.UpdateUserDTO) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:12:31.131 +05:30 [INF] Executed DbCommand (40ms) [Parameters=[p0='?' (DbType = Int32), p1='?' (Size = 4000), p2='?' (Size = 4000), p3='?' (Size = 4000), p4='?' (Size = 4000), p5='?', p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+
+                EXEC sp_UpdateUserDetail
+                    @Id = @p0,
+                    @UserName = @p1,
+                    @Email = @p2,
+                    @FitnessGoal = @p3,
+                    @PasswordHash = @p4,
+                    @Role = @p5,
+                    @IsAdmin = @p6
+2025-05-14 12:12:31.133 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType6`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], UserAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-14 12:12:31.147 +05:30 [INF] Executed action UserAPI.Controllers.UserController.UpdateUser (UserAPI) in 562.5ms
+2025-05-14 12:12:31.147 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:12:31.148 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - 200 null application/json; charset=utf-8 589.5149ms
+2025-05-14 12:12:54.042 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - null null
+2025-05-14 12:12:54.042 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:12:54.043 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - 204 null null 1.2474ms
+2025-05-14 12:12:54.050 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - application/json 118
+2025-05-14 12:12:54.050 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:12:54.051 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:12:54.051 +05:30 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateUser(Int32, UserAPI.Models.DTOs.UpdateUserDTO) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:12:54.580 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[p0='?' (DbType = Int32), p1='?' (Size = 4000), p2='?' (Size = 4000), p3='?' (Size = 4000), p4='?' (Size = 4000), p5='?', p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+
+                EXEC sp_UpdateUserDetail
+                    @Id = @p0,
+                    @UserName = @p1,
+                    @Email = @p2,
+                    @FitnessGoal = @p3,
+                    @PasswordHash = @p4,
+                    @Role = @p5,
+                    @IsAdmin = @p6
+2025-05-14 12:12:54.581 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType6`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], UserAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-14 12:12:54.581 +05:30 [INF] Executed action UserAPI.Controllers.UserController.UpdateUser (UserAPI) in 530.0968ms
+2025-05-14 12:12:54.582 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:12:54.582 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - 200 null application/json; charset=utf-8 532.128ms
+2025-05-14 12:17:19.095 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - null null
+2025-05-14 12:17:19.096 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:17:19.097 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - 204 null null 1.6038ms
+2025-05-14 12:17:19.112 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/8 - null null
+2025-05-14 12:17:19.119 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:17:19.120 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:17:19.121 +05:30 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:17:19.158 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetUserById @UserId = @p0
+2025-05-14 12:17:19.159 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-14 12:17:19.160 +05:30 [INF] Executed action UserAPI.Controllers.UserController.GetById (UserAPI) in 39.4088ms
+2025-05-14 12:17:19.160 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:17:19.161 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/8 - 200 null application/json; charset=utf-8 50.9271ms
+2025-05-14 12:18:04.303 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - null null
+2025-05-14 12:18:04.303 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:18:04.303 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - 204 null null 0.6679ms
+2025-05-14 12:18:04.324 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/8 - null null
+2025-05-14 12:18:04.324 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:18:04.327 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:18:04.328 +05:30 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:18:04.385 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetUserById @UserId = @p0
+2025-05-14 12:18:04.385 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-14 12:18:04.387 +05:30 [INF] Executed action UserAPI.Controllers.UserController.GetById (UserAPI) in 58.263ms
+2025-05-14 12:18:04.387 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:18:04.387 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/8 - 200 null application/json; charset=utf-8 63.3997ms
+2025-05-14 12:18:15.345 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - null null
+2025-05-14 12:18:15.353 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:18:15.354 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - 204 null null 8.8018ms
+2025-05-14 12:18:15.356 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - application/json 93
+2025-05-14 12:18:15.357 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:18:15.358 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:18:15.359 +05:30 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateUser(Int32, UserAPI.Models.DTOs.UpdateUserDTO) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:18:15.426 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-05-14 12:18:15.566 +05:30 [INF] Executed action UserAPI.Controllers.UserController.UpdateUser (UserAPI) in 207.067ms
+2025-05-14 12:18:15.566 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:18:15.567 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - 400 null application/problem+json; charset=utf-8 210.9123ms
+2025-05-14 12:22:09.325 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - null null
+2025-05-14 12:22:09.326 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:22:09.327 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - 204 null null 2.7801ms
+2025-05-14 12:22:09.331 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/8 - null null
+2025-05-14 12:22:09.335 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:22:09.348 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:22:09.353 +05:30 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:22:09.527 +05:30 [INF] Executed DbCommand (50ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetUserById @UserId = @p0
+2025-05-14 12:22:09.529 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-14 12:22:09.531 +05:30 [INF] Executed action UserAPI.Controllers.UserController.GetById (UserAPI) in 177.8685ms
+2025-05-14 12:22:09.531 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:22:09.532 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/8 - 200 null application/json; charset=utf-8 200.7036ms
+2025-05-14 12:22:29.204 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - null null
+2025-05-14 12:22:29.204 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:22:29.204 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - 204 null null 0.9459ms
+2025-05-14 12:22:29.208 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/8 - null null
+2025-05-14 12:22:29.209 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:22:29.213 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:22:29.213 +05:30 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:22:29.271 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetUserById @UserId = @p0
+2025-05-14 12:22:29.273 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-14 12:22:29.274 +05:30 [INF] Executed action UserAPI.Controllers.UserController.GetById (UserAPI) in 61.0602ms
+2025-05-14 12:22:29.274 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:22:29.274 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/8 - 200 null application/json; charset=utf-8 66.4451ms
+2025-05-14 12:22:36.789 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - null null
+2025-05-14 12:22:36.789 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:22:36.789 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - 204 null null 0.7711ms
+2025-05-14 12:22:36.791 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - application/json 93
+2025-05-14 12:22:36.793 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:22:36.797 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:22:36.798 +05:30 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateUser(Int32, UserAPI.Models.DTOs.UpdateUserDTO) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:22:36.827 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-05-14 12:22:36.829 +05:30 [INF] Executed action UserAPI.Controllers.UserController.UpdateUser (UserAPI) in 31.4656ms
+2025-05-14 12:22:36.829 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:22:36.830 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - 400 null application/problem+json; charset=utf-8 38.252ms
+2025-05-14 12:22:58.940 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - null null
+2025-05-14 12:22:58.940 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:22:58.940 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - 204 null null 0.5198ms
+2025-05-14 12:22:58.976 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/8 - null null
+2025-05-14 12:22:58.976 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:22:58.977 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:22:58.977 +05:30 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:22:59.028 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetUserById @UserId = @p0
+2025-05-14 12:22:59.029 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-14 12:22:59.029 +05:30 [INF] Executed action UserAPI.Controllers.UserController.GetById (UserAPI) in 52.0427ms
+2025-05-14 12:22:59.029 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:22:59.030 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/8 - 200 null application/json; charset=utf-8 53.4055ms
+2025-05-14 12:23:06.605 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - null null
+2025-05-14 12:23:06.605 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:23:06.606 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - 204 null null 1.2404ms
+2025-05-14 12:23:06.612 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - application/json 93
+2025-05-14 12:23:06.612 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:23:06.627 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:23:06.627 +05:30 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateUser(Int32, UserAPI.Models.DTOs.UpdateUserDTO) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:23:06.644 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-05-14 12:23:06.644 +05:30 [INF] Executed action UserAPI.Controllers.UserController.UpdateUser (UserAPI) in 16.9774ms
+2025-05-14 12:23:06.645 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:23:06.645 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - 400 null application/problem+json; charset=utf-8 32.8914ms
+2025-05-14 12:23:16.325 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - null null
+2025-05-14 12:23:16.325 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:23:16.325 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - 204 null null 0.3016ms
+2025-05-14 12:23:16.327 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - application/json 117
+2025-05-14 12:23:16.327 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:23:16.327 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:23:16.328 +05:30 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateUser(Int32, UserAPI.Models.DTOs.UpdateUserDTO) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:23:16.870 +05:30 [INF] Executed DbCommand (46ms) [Parameters=[p0='?' (DbType = Int32), p1='?' (Size = 4000), p2='?' (Size = 4000), p3='?' (Size = 4000), p4='?' (Size = 4000), p5='?', p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+
+                EXEC sp_UpdateUserDetail
+                    @Id = @p0,
+                    @UserName = @p1,
+                    @Email = @p2,
+                    @FitnessGoal = @p3,
+                    @PasswordHash = @p4,
+                    @Role = @p5,
+                    @IsAdmin = @p6
+2025-05-14 12:23:16.871 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType6`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], UserAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-14 12:23:16.872 +05:30 [INF] Executed action UserAPI.Controllers.UserController.UpdateUser (UserAPI) in 544.4814ms
+2025-05-14 12:23:16.872 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:23:16.873 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - 200 null application/json; charset=utf-8 546.3526ms
+2025-05-14 12:23:25.606 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - null null
+2025-05-14 12:23:25.606 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:23:25.607 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - 204 null null 0.9584ms
+2025-05-14 12:23:25.609 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - application/json 120
+2025-05-14 12:23:25.609 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:23:25.610 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:23:25.610 +05:30 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateUser(Int32, UserAPI.Models.DTOs.UpdateUserDTO) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:23:26.126 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[p0='?' (DbType = Int32), p1='?' (Size = 4000), p2='?' (Size = 4000), p3='?' (Size = 4000), p4='?' (Size = 4000), p5='?', p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+
+                EXEC sp_UpdateUserDetail
+                    @Id = @p0,
+                    @UserName = @p1,
+                    @Email = @p2,
+                    @FitnessGoal = @p3,
+                    @PasswordHash = @p4,
+                    @Role = @p5,
+                    @IsAdmin = @p6
+2025-05-14 12:23:26.127 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType6`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], UserAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-14 12:23:26.128 +05:30 [INF] Executed action UserAPI.Controllers.UserController.UpdateUser (UserAPI) in 517.0712ms
+2025-05-14 12:23:26.128 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:23:26.128 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - 200 null application/json; charset=utf-8 519.1632ms
+2025-05-14 12:25:52.872 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - null null
+2025-05-14 12:25:52.873 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:25:52.873 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - 204 null null 0.9597ms
+2025-05-14 12:25:52.877 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/8 - null null
+2025-05-14 12:25:52.887 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:25:52.888 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:25:52.893 +05:30 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:25:52.934 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetUserById @UserId = @p0
+2025-05-14 12:25:52.935 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-14 12:25:52.936 +05:30 [INF] Executed action UserAPI.Controllers.UserController.GetById (UserAPI) in 43.0079ms
+2025-05-14 12:25:52.936 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:25:52.937 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/8 - 200 null application/json; charset=utf-8 59.8442ms
+2025-05-14 12:26:04.795 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - null null
+2025-05-14 12:26:04.795 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:26:04.795 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - 204 null null 0.8474ms
+2025-05-14 12:26:04.800 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - application/json 117
+2025-05-14 12:26:04.801 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:26:04.802 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:26:04.802 +05:30 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateUser(Int32, UserAPI.Models.DTOs.UpdateUserDTO) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:26:05.318 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[p0='?' (DbType = Int32), p1='?' (Size = 4000), p2='?' (Size = 4000), p3='?' (Size = 4000), p4='?' (Size = 4000), p5='?', p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+
+                EXEC sp_UpdateUserDetail
+                    @Id = @p0,
+                    @UserName = @p1,
+                    @Email = @p2,
+                    @FitnessGoal = @p3,
+                    @PasswordHash = @p4,
+                    @Role = @p5,
+                    @IsAdmin = @p6
+2025-05-14 12:26:05.319 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType6`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], UserAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-14 12:26:05.320 +05:30 [INF] Executed action UserAPI.Controllers.UserController.UpdateUser (UserAPI) in 517.4163ms
+2025-05-14 12:26:05.320 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:26:05.320 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - 200 null application/json; charset=utf-8 520.2155ms
+2025-05-14 12:27:04.133 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - null null
+2025-05-14 12:27:04.133 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:27:04.136 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - 204 null null 3.7178ms
+2025-05-14 12:27:04.148 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - application/json 117
+2025-05-14 12:27:04.149 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:27:04.160 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:27:04.160 +05:30 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateUser(Int32, UserAPI.Models.DTOs.UpdateUserDTO) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:27:04.716 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[p0='?' (DbType = Int32), p1='?' (Size = 4000), p2='?' (Size = 4000), p3='?' (Size = 4000), p4='?' (Size = 4000), p5='?', p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+
+                EXEC sp_UpdateUserDetail
+                    @Id = @p0,
+                    @UserName = @p1,
+                    @Email = @p2,
+                    @FitnessGoal = @p3,
+                    @PasswordHash = @p4,
+                    @Role = @p5,
+                    @IsAdmin = @p6
+2025-05-14 12:27:04.716 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType6`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], UserAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-14 12:27:04.717 +05:30 [INF] Executed action UserAPI.Controllers.UserController.UpdateUser (UserAPI) in 556.0242ms
+2025-05-14 12:27:04.717 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:27:04.717 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - 200 null application/json; charset=utf-8 568.5595ms
+2025-05-14 12:27:17.936 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-profile-picture - null null
+2025-05-14 12:27:17.936 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:27:17.936 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-profile-picture - 204 null null 0.5935ms
+2025-05-14 12:27:17.946 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5227/api/user/update-profile-picture - multipart/form-data; boundary=----WebKitFormBoundaryZExBr5xj1ZEkqFQc 1188862
+2025-05-14 12:27:17.947 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:27:17.947 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.UpdateProfilePicture (UserAPI)'
+2025-05-14 12:27:17.948 +05:30 [INF] Route matched with {action = "UpdateProfilePicture", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProfilePicture(UserAPI.Models.DTOs.ProfilePictureDto) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:27:18.327 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+
+            EXEC sp_UpdateProfileImage 
+                @UserId = @p0, 
+                @ProfileImageUrl = @p1
+2025-05-14 12:27:18.328 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType7`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-14 12:27:18.328 +05:30 [INF] Executed action UserAPI.Controllers.UserController.UpdateProfilePicture (UserAPI) in 380.7793ms
+2025-05-14 12:27:18.329 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.UpdateProfilePicture (UserAPI)'
+2025-05-14 12:27:18.331 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5227/api/user/update-profile-picture - 200 null application/json; charset=utf-8 384.8434ms
+2025-05-14 12:27:18.334 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - null null
+2025-05-14 12:27:18.335 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:27:18.335 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - 204 null null 0.3984ms
+2025-05-14 12:27:18.338 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/8 - null null
+2025-05-14 12:27:18.338 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:27:18.342 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:27:18.342 +05:30 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:27:18.358 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetUserById @UserId = @p0
+2025-05-14 12:27:18.359 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-14 12:27:18.359 +05:30 [INF] Executed action UserAPI.Controllers.UserController.GetById (UserAPI) in 16.8313ms
+2025-05-14 12:27:18.359 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:27:18.360 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/8 - 200 null application/json; charset=utf-8 22.0273ms
+2025-05-14 12:27:24.784 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - null null
+2025-05-14 12:27:24.784 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:27:24.784 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - 204 null null 0.3745ms
+2025-05-14 12:27:24.787 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - application/json 117
+2025-05-14 12:27:24.787 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:27:24.788 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:27:24.789 +05:30 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateUser(Int32, UserAPI.Models.DTOs.UpdateUserDTO) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:27:25.246 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[p0='?' (DbType = Int32), p1='?' (Size = 4000), p2='?' (Size = 4000), p3='?' (Size = 4000), p4='?' (Size = 4000), p5='?', p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+
+                EXEC sp_UpdateUserDetail
+                    @Id = @p0,
+                    @UserName = @p1,
+                    @Email = @p2,
+                    @FitnessGoal = @p3,
+                    @PasswordHash = @p4,
+                    @Role = @p5,
+                    @IsAdmin = @p6
+2025-05-14 12:27:25.249 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType6`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], UserAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-14 12:27:25.251 +05:30 [INF] Executed action UserAPI.Controllers.UserController.UpdateUser (UserAPI) in 462.0233ms
+2025-05-14 12:27:25.251 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:27:25.251 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - 200 null application/json; charset=utf-8 464.5655ms
+2025-05-14 12:31:07.676 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - null null
+2025-05-14 12:31:07.679 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:31:07.680 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - 204 null null 3.4848ms
+2025-05-14 12:31:07.689 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/8 - null null
+2025-05-14 12:31:07.695 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:31:07.697 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:31:07.697 +05:30 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:31:07.764 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetUserById @UserId = @p0
+2025-05-14 12:31:07.764 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-14 12:31:07.764 +05:30 [INF] Executed action UserAPI.Controllers.UserController.GetById (UserAPI) in 66.9311ms
+2025-05-14 12:31:07.765 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:31:07.765 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/8 - 200 null application/json; charset=utf-8 75.8737ms
+2025-05-14 12:31:20.930 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - null null
+2025-05-14 12:31:20.931 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:31:20.937 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-user/8 - 204 null null 7.6169ms
+2025-05-14 12:31:20.939 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - application/json 117
+2025-05-14 12:31:20.939 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:31:20.941 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:31:20.941 +05:30 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateUser(Int32, UserAPI.Models.DTOs.UpdateUserDTO) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:31:21.450 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[p0='?' (DbType = Int32), p1='?' (Size = 4000), p2='?' (Size = 4000), p3='?' (Size = 4000), p4='?' (Size = 4000), p5='?', p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+
+                EXEC sp_UpdateUserDetail
+                    @Id = @p0,
+                    @UserName = @p1,
+                    @Email = @p2,
+                    @FitnessGoal = @p3,
+                    @PasswordHash = @p4,
+                    @Role = @p5,
+                    @IsAdmin = @p6
+2025-05-14 12:31:21.451 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType6`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], UserAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-14 12:31:21.451 +05:30 [INF] Executed action UserAPI.Controllers.UserController.UpdateUser (UserAPI) in 510.1653ms
+2025-05-14 12:31:21.452 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.UpdateUser (UserAPI)'
+2025-05-14 12:31:21.452 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5227/api/user/update-user/8 - 200 null application/json; charset=utf-8 513.4709ms
+2025-05-14 12:32:05.606 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-profile-picture - null null
+2025-05-14 12:32:05.607 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:32:05.607 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/update-profile-picture - 204 null null 0.4715ms
+2025-05-14 12:32:05.624 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5227/api/user/update-profile-picture - multipart/form-data; boundary=----WebKitFormBoundaryGF0GXqqz2fMCFBW8 203180
+2025-05-14 12:32:05.625 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:32:05.626 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.UpdateProfilePicture (UserAPI)'
+2025-05-14 12:32:05.626 +05:30 [INF] Route matched with {action = "UpdateProfilePicture", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProfilePicture(UserAPI.Models.DTOs.ProfilePictureDto) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:32:05.753 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+
+            EXEC sp_UpdateProfileImage 
+                @UserId = @p0, 
+                @ProfileImageUrl = @p1
+2025-05-14 12:32:05.754 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType7`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-14 12:32:05.754 +05:30 [INF] Executed action UserAPI.Controllers.UserController.UpdateProfilePicture (UserAPI) in 127.8852ms
+2025-05-14 12:32:05.754 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.UpdateProfilePicture (UserAPI)'
+2025-05-14 12:32:05.756 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5227/api/user/update-profile-picture - 200 null application/json; charset=utf-8 131.9487ms
+2025-05-14 12:32:05.767 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - null null
+2025-05-14 12:32:05.767 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:32:05.768 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - 204 null null 0.7252ms
+2025-05-14 12:32:05.771 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/8 - null null
+2025-05-14 12:32:05.771 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:32:05.773 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:32:05.773 +05:30 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:32:05.792 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetUserById @UserId = @p0
+2025-05-14 12:32:05.793 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-14 12:32:05.793 +05:30 [INF] Executed action UserAPI.Controllers.UserController.GetById (UserAPI) in 20.2468ms
+2025-05-14 12:32:05.793 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:32:05.794 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/8 - 200 null application/json; charset=utf-8 22.925ms
+2025-05-14 12:35:18.216 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - null null
+2025-05-14 12:35:18.216 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:35:18.218 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - 204 null null 2.378ms
+2025-05-14 12:35:18.223 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/8 - null null
+2025-05-14 12:35:18.224 +05:30 [INF] CORS policy execution successful.
+2025-05-14 12:35:18.234 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:35:18.234 +05:30 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 12:35:18.290 +05:30 [INF] Executed DbCommand (40ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetUserById @UserId = @p0
+2025-05-14 12:35:18.331 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-14 12:35:18.331 +05:30 [INF] Executed action UserAPI.Controllers.UserController.GetById (UserAPI) in 97.194ms
+2025-05-14 12:35:18.331 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.GetById (UserAPI)'
+2025-05-14 12:35:18.332 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/8 - 200 null application/json; charset=utf-8 108.8042ms
+2025-05-14 14:24:30.997 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - null null
+2025-05-14 14:24:31.014 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:24:31.023 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/8 - 204 null null 31.9259ms
+2025-05-14 14:24:31.027 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/8 - null null
+2025-05-14 14:24:31.092 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:24:31.453 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/8 - 401 null null 425.9278ms
+2025-05-14 14:24:35.830 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/all-users - null null
+2025-05-14 14:24:35.831 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:24:35.831 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/all-users - 204 null null 1.1008ms
+2025-05-14 14:24:35.834 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/all-users - null null
+2025-05-14 14:24:35.836 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:24:35.971 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/all-users - 401 null null 136.7742ms
+2025-05-14 14:24:49.933 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/authentication/login - null null
+2025-05-14 14:24:49.933 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:24:49.933 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/authentication/login - 204 null null 0.4068ms
+2025-05-14 14:24:49.935 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5227/api/authentication/login - application/json 54
+2025-05-14 14:24:49.938 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:24:49.944 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.AuthenticationController.Login (UserAPI)'
+2025-05-14 14:24:49.954 +05:30 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(UserAPI.Models.DTOs.LoginUserDto) on controller UserAPI.Controllers.AuthenticationController (UserAPI).
+2025-05-14 14:24:50.331 +05:30 [INF] Executed DbCommand (128ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[createdAt], [u].[email], [u].[fitnessGoal], [u].[IsActive], [u].[OtpCode], [u].[OtpExpiry], [u].[passwordHash], [u].[ProfileUrl], [u].[role], [u].[userName]
+FROM [Users] AS [u]
+WHERE [u].[userName] = @__username_0
+2025-05-14 14:24:50.856 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-14 14:24:50.858 +05:30 [INF] Executed action UserAPI.Controllers.AuthenticationController.Login (UserAPI) in 903.0515ms
+2025-05-14 14:24:50.858 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.AuthenticationController.Login (UserAPI)'
+2025-05-14 14:24:50.859 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5227/api/authentication/login - 200 null application/json; charset=utf-8 923.6832ms
+2025-05-14 14:24:52.885 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/all-users - null null
+2025-05-14 14:24:52.885 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:24:52.885 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/all-users - 204 null null 0.314ms
+2025-05-14 14:24:52.887 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/all-users - null null
+2025-05-14 14:24:52.887 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:24:52.889 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.GetAllUsers (UserAPI)'
+2025-05-14 14:24:52.890 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers() on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 14:24:52.957 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetAllUsers
+2025-05-14 14:24:52.958 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserAPI.Models.User, UserAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-14 14:24:52.960 +05:30 [INF] Executed action UserAPI.Controllers.UserController.GetAllUsers (UserAPI) in 69.6415ms
+2025-05-14 14:24:52.960 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.GetAllUsers (UserAPI)'
+2025-05-14 14:24:52.960 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/all-users - 200 null application/json; charset=utf-8 73.8746ms
+2025-05-14 14:25:01.696 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/toggle-status/24 - null null
+2025-05-14 14:25:01.697 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:25:01.698 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/toggle-status/24 - 204 null null 1.1244ms
+2025-05-14 14:25:01.699 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5227/api/user/toggle-status/24 - application/json 2
+2025-05-14 14:25:01.699 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:25:01.713 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI)'
+2025-05-14 14:25:01.754 +05:30 [INF] Route matched with {action = "ToggleUserStatus", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ToggleUserStatus(Int32) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 14:25:02.036 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[createdAt], [u].[email], [u].[fitnessGoal], [u].[IsActive], [u].[OtpCode], [u].[OtpExpiry], [u].[passwordHash], [u].[ProfileUrl], [u].[role], [u].[userName]
+FROM [Users] AS [u]
+WHERE [u].[id] = @__p_0
+2025-05-14 14:25:02.471 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (Size = 100) (DbType = AnsiString), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 255) (DbType = AnsiString), @p7='?' (Size = 4000), @p8='?' (Size = 50) (DbType = AnsiString), @p9='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [createdAt] = @p0, [email] = @p1, [fitnessGoal] = @p2, [IsActive] = @p3, [OtpCode] = @p4, [OtpExpiry] = @p5, [passwordHash] = @p6, [ProfileUrl] = @p7, [role] = @p8, [userName] = @p9
+OUTPUT 1
+WHERE [id] = @p10;
+2025-05-14 14:25:02.750 +05:30 [INF] Executing OkObjectResult, writing value of type 'UserAPI.Models.DTOs.ResponseDto'.
+2025-05-14 14:25:02.754 +05:30 [INF] Executed action UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI) in 998.9314ms
+2025-05-14 14:25:02.754 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI)'
+2025-05-14 14:25:02.754 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5227/api/user/toggle-status/24 - 200 null application/json; charset=utf-8 1055.3409ms
+2025-05-14 14:25:09.476 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/toggle-status/25 - null null
+2025-05-14 14:25:09.476 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:25:09.476 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/toggle-status/25 - 204 null null 0.5402ms
+2025-05-14 14:25:09.480 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5227/api/user/toggle-status/25 - application/json 2
+2025-05-14 14:25:09.481 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:25:09.481 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI)'
+2025-05-14 14:25:09.482 +05:30 [INF] Route matched with {action = "ToggleUserStatus", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ToggleUserStatus(Int32) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 14:25:09.502 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[createdAt], [u].[email], [u].[fitnessGoal], [u].[IsActive], [u].[OtpCode], [u].[OtpExpiry], [u].[passwordHash], [u].[ProfileUrl], [u].[role], [u].[userName]
+FROM [Users] AS [u]
+WHERE [u].[id] = @__p_0
+2025-05-14 14:25:09.514 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (Size = 100) (DbType = AnsiString), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 255) (DbType = AnsiString), @p7='?' (Size = 4000), @p8='?' (Size = 50) (DbType = AnsiString), @p9='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [createdAt] = @p0, [email] = @p1, [fitnessGoal] = @p2, [IsActive] = @p3, [OtpCode] = @p4, [OtpExpiry] = @p5, [passwordHash] = @p6, [ProfileUrl] = @p7, [role] = @p8, [userName] = @p9
+OUTPUT 1
+WHERE [id] = @p10;
+2025-05-14 14:25:09.530 +05:30 [INF] Executing OkObjectResult, writing value of type 'UserAPI.Models.DTOs.ResponseDto'.
+2025-05-14 14:25:09.531 +05:30 [INF] Executed action UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI) in 49.0434ms
+2025-05-14 14:25:09.531 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI)'
+2025-05-14 14:25:09.531 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5227/api/user/toggle-status/25 - 200 null application/json; charset=utf-8 51.0119ms
+2025-05-14 14:25:15.402 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/toggle-status/25 - null null
+2025-05-14 14:25:15.402 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:25:15.402 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/toggle-status/25 - 204 null null 0.4489ms
+2025-05-14 14:25:15.404 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5227/api/user/toggle-status/25 - application/json 2
+2025-05-14 14:25:15.404 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:25:15.405 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI)'
+2025-05-14 14:25:15.405 +05:30 [INF] Route matched with {action = "ToggleUserStatus", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ToggleUserStatus(Int32) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 14:25:15.418 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[createdAt], [u].[email], [u].[fitnessGoal], [u].[IsActive], [u].[OtpCode], [u].[OtpExpiry], [u].[passwordHash], [u].[ProfileUrl], [u].[role], [u].[userName]
+FROM [Users] AS [u]
+WHERE [u].[id] = @__p_0
+2025-05-14 14:25:15.423 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (Size = 100) (DbType = AnsiString), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 255) (DbType = AnsiString), @p7='?' (Size = 4000), @p8='?' (Size = 50) (DbType = AnsiString), @p9='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [createdAt] = @p0, [email] = @p1, [fitnessGoal] = @p2, [IsActive] = @p3, [OtpCode] = @p4, [OtpExpiry] = @p5, [passwordHash] = @p6, [ProfileUrl] = @p7, [role] = @p8, [userName] = @p9
+OUTPUT 1
+WHERE [id] = @p10;
+2025-05-14 14:25:15.433 +05:30 [INF] Executing OkObjectResult, writing value of type 'UserAPI.Models.DTOs.ResponseDto'.
+2025-05-14 14:25:15.434 +05:30 [INF] Executed action UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI) in 28.7448ms
+2025-05-14 14:25:15.434 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI)'
+2025-05-14 14:25:15.435 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5227/api/user/toggle-status/25 - 200 null application/json; charset=utf-8 30.2777ms
+2025-05-14 14:27:15.345 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/toggle-status/24 - null null
+2025-05-14 14:27:15.345 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:27:15.346 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/toggle-status/24 - 204 null null 3.0507ms
+2025-05-14 14:27:15.357 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5227/api/user/toggle-status/24 - application/json 2
+2025-05-14 14:27:15.358 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:27:15.367 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI)'
+2025-05-14 14:27:15.367 +05:30 [INF] Route matched with {action = "ToggleUserStatus", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ToggleUserStatus(Int32) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 14:27:15.425 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[createdAt], [u].[email], [u].[fitnessGoal], [u].[IsActive], [u].[OtpCode], [u].[OtpExpiry], [u].[passwordHash], [u].[ProfileUrl], [u].[role], [u].[userName]
+FROM [Users] AS [u]
+WHERE [u].[id] = @__p_0
+2025-05-14 14:27:15.439 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (Size = 100) (DbType = AnsiString), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 255) (DbType = AnsiString), @p7='?' (Size = 4000), @p8='?' (Size = 50) (DbType = AnsiString), @p9='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [createdAt] = @p0, [email] = @p1, [fitnessGoal] = @p2, [IsActive] = @p3, [OtpCode] = @p4, [OtpExpiry] = @p5, [passwordHash] = @p6, [ProfileUrl] = @p7, [role] = @p8, [userName] = @p9
+OUTPUT 1
+WHERE [id] = @p10;
+2025-05-14 14:27:15.450 +05:30 [INF] Executing OkObjectResult, writing value of type 'UserAPI.Models.DTOs.ResponseDto'.
+2025-05-14 14:27:15.451 +05:30 [INF] Executed action UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI) in 83.6376ms
+2025-05-14 14:27:15.451 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI)'
+2025-05-14 14:27:15.451 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5227/api/user/toggle-status/24 - 200 null application/json; charset=utf-8 98.1358ms
+2025-05-14 14:30:42.047 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/all-users - null null
+2025-05-14 14:30:42.050 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:30:42.050 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/all-users - 204 null null 3.0211ms
+2025-05-14 14:30:42.068 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/all-users - null null
+2025-05-14 14:30:42.068 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:30:42.076 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.GetAllUsers (UserAPI)'
+2025-05-14 14:30:42.076 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers() on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 14:30:42.260 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetAllUsers
+2025-05-14 14:30:42.261 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserAPI.Models.User, UserAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-14 14:30:42.262 +05:30 [INF] Executed action UserAPI.Controllers.UserController.GetAllUsers (UserAPI) in 185.1265ms
+2025-05-14 14:30:42.262 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.GetAllUsers (UserAPI)'
+2025-05-14 14:30:42.262 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/all-users - 200 null application/json; charset=utf-8 194.1705ms
+2025-05-14 14:31:09.155 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/all-users - null null
+2025-05-14 14:31:09.155 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:31:09.157 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/all-users - 204 null null 1.7617ms
+2025-05-14 14:31:09.162 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/all-users - null null
+2025-05-14 14:31:09.163 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:31:09.170 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.GetAllUsers (UserAPI)'
+2025-05-14 14:31:09.172 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers() on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 14:31:09.223 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetAllUsers
+2025-05-14 14:31:09.224 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserAPI.Models.User, UserAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-14 14:31:09.224 +05:30 [INF] Executed action UserAPI.Controllers.UserController.GetAllUsers (UserAPI) in 52.3904ms
+2025-05-14 14:31:09.224 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.GetAllUsers (UserAPI)'
+2025-05-14 14:31:09.225 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/all-users - 200 null application/json; charset=utf-8 63.3481ms
+2025-05-14 14:31:17.960 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/toggle-status/24 - null null
+2025-05-14 14:31:17.960 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:31:17.960 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/toggle-status/24 - 204 null null 0.6491ms
+2025-05-14 14:31:17.973 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5227/api/user/toggle-status/24 - application/json 2
+2025-05-14 14:31:17.973 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:31:17.977 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI)'
+2025-05-14 14:31:17.977 +05:30 [INF] Route matched with {action = "ToggleUserStatus", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ToggleUserStatus(Int32) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 14:31:17.990 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[createdAt], [u].[email], [u].[fitnessGoal], [u].[IsActive], [u].[OtpCode], [u].[OtpExpiry], [u].[passwordHash], [u].[ProfileUrl], [u].[role], [u].[userName]
+FROM [Users] AS [u]
+WHERE [u].[id] = @__p_0
+2025-05-14 14:31:18.002 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (Size = 100) (DbType = AnsiString), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 255) (DbType = AnsiString), @p7='?' (Size = 4000), @p8='?' (Size = 50) (DbType = AnsiString), @p9='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [createdAt] = @p0, [email] = @p1, [fitnessGoal] = @p2, [IsActive] = @p3, [OtpCode] = @p4, [OtpExpiry] = @p5, [passwordHash] = @p6, [ProfileUrl] = @p7, [role] = @p8, [userName] = @p9
+OUTPUT 1
+WHERE [id] = @p10;
+2025-05-14 14:31:18.010 +05:30 [INF] Executing OkObjectResult, writing value of type 'UserAPI.Models.DTOs.ResponseDto'.
+2025-05-14 14:31:18.011 +05:30 [INF] Executed action UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI) in 33.8233ms
+2025-05-14 14:31:18.011 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI)'
+2025-05-14 14:31:18.011 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5227/api/user/toggle-status/24 - 200 null application/json; charset=utf-8 38.027ms
+2025-05-14 14:31:21.785 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/toggle-status/25 - null null
+2025-05-14 14:31:21.786 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:31:21.786 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/toggle-status/25 - 204 null null 0.4166ms
+2025-05-14 14:31:21.787 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5227/api/user/toggle-status/25 - application/json 2
+2025-05-14 14:31:21.787 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:31:21.788 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI)'
+2025-05-14 14:31:21.788 +05:30 [INF] Route matched with {action = "ToggleUserStatus", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ToggleUserStatus(Int32) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 14:31:21.800 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[createdAt], [u].[email], [u].[fitnessGoal], [u].[IsActive], [u].[OtpCode], [u].[OtpExpiry], [u].[passwordHash], [u].[ProfileUrl], [u].[role], [u].[userName]
+FROM [Users] AS [u]
+WHERE [u].[id] = @__p_0
+2025-05-14 14:31:21.805 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (Size = 100) (DbType = AnsiString), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 255) (DbType = AnsiString), @p7='?' (Size = 4000), @p8='?' (Size = 50) (DbType = AnsiString), @p9='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [createdAt] = @p0, [email] = @p1, [fitnessGoal] = @p2, [IsActive] = @p3, [OtpCode] = @p4, [OtpExpiry] = @p5, [passwordHash] = @p6, [ProfileUrl] = @p7, [role] = @p8, [userName] = @p9
+OUTPUT 1
+WHERE [id] = @p10;
+2025-05-14 14:31:21.814 +05:30 [INF] Executing OkObjectResult, writing value of type 'UserAPI.Models.DTOs.ResponseDto'.
+2025-05-14 14:31:21.815 +05:30 [INF] Executed action UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI) in 26.4258ms
+2025-05-14 14:31:21.815 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI)'
+2025-05-14 14:31:21.815 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5227/api/user/toggle-status/25 - 200 null application/json; charset=utf-8 28.0703ms
+2025-05-14 14:31:29.346 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/toggle-status/25 - null null
+2025-05-14 14:31:29.346 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:31:29.346 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/toggle-status/25 - 204 null null 0.4357ms
+2025-05-14 14:31:29.348 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5227/api/user/toggle-status/25 - application/json 2
+2025-05-14 14:31:29.349 +05:30 [INF] CORS policy execution successful.
+2025-05-14 14:31:29.349 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI)'
+2025-05-14 14:31:29.355 +05:30 [INF] Route matched with {action = "ToggleUserStatus", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ToggleUserStatus(Int32) on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 14:31:29.379 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[createdAt], [u].[email], [u].[fitnessGoal], [u].[IsActive], [u].[OtpCode], [u].[OtpExpiry], [u].[passwordHash], [u].[ProfileUrl], [u].[role], [u].[userName]
+FROM [Users] AS [u]
+WHERE [u].[id] = @__p_0
+2025-05-14 14:31:29.389 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (Size = 100) (DbType = AnsiString), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 255) (DbType = AnsiString), @p7='?' (Size = 4000), @p8='?' (Size = 50) (DbType = AnsiString), @p9='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [createdAt] = @p0, [email] = @p1, [fitnessGoal] = @p2, [IsActive] = @p3, [OtpCode] = @p4, [OtpExpiry] = @p5, [passwordHash] = @p6, [ProfileUrl] = @p7, [role] = @p8, [userName] = @p9
+OUTPUT 1
+WHERE [id] = @p10;
+2025-05-14 14:31:29.403 +05:30 [INF] Executing OkObjectResult, writing value of type 'UserAPI.Models.DTOs.ResponseDto'.
+2025-05-14 14:31:29.403 +05:30 [INF] Executed action UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI) in 47.93ms
+2025-05-14 14:31:29.404 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.ToggleUserStatus (UserAPI)'
+2025-05-14 14:31:29.404 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5227/api/user/toggle-status/25 - 200 null application/json; charset=utf-8 55.9229ms
+2025-05-14 22:49:51.444 +05:30 [INF] Now listening on: http://localhost:5227
+2025-05-14 22:49:51.643 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-14 22:49:51.644 +05:30 [INF] Hosting environment: Development
+2025-05-14 22:49:51.645 +05:30 [INF] Content root path: C:\Users\rohit.soni\Desktop\FitnessTracking\BackendApi\FitnessTrackingApp\UserAPI
+2025-05-14 22:49:52.677 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/swagger/index.html - null null
+2025-05-14 22:49:53.504 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/swagger/index.html - 200 null text/html;charset=utf-8 853.3657ms
+2025-05-14 22:49:53.509 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-14 22:49:53.512 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 3.7969ms
+2025-05-14 22:49:53.547 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/swagger/swagger-ui.css - null null
+2025-05-14 22:49:53.556 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/_vs/browserLink - null null
+2025-05-14 22:49:53.557 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/swagger/swagger-ui-standalone-preset.js - null null
+2025-05-14 22:49:53.566 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/swagger/swagger-ui-bundle.js - null null
+2025-05-14 22:49:53.572 +05:30 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2025-05-14 22:49:53.572 +05:30 [INF] The file /swagger-ui.css was not modified
+2025-05-14 22:49:53.584 +05:30 [INF] The file /swagger-ui-bundle.js was not modified
+2025-05-14 22:49:53.592 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/swagger/swagger-ui-standalone-preset.js - 304 null text/javascript 35.5383ms
+2025-05-14 22:49:53.593 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/swagger/swagger-ui-bundle.js - 304 null text/javascript 27.0555ms
+2025-05-14 22:49:53.639 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/swagger/swagger-ui.css - 304 null text/css 92.4227ms
+2025-05-14 22:49:53.732 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/_vs/browserLink - 200 null text/javascript; charset=UTF-8 175.2804ms
+2025-05-14 22:49:53.904 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/swagger/v1/swagger.json - null null
+2025-05-14 22:49:53.925 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.5019ms
+2025-05-14 22:54:09.976 +05:30 [INF] Now listening on: http://localhost:5227
+2025-05-14 22:54:10.193 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-14 22:54:10.194 +05:30 [INF] Hosting environment: Development
+2025-05-14 22:54:10.194 +05:30 [INF] Content root path: C:\Users\rohit.soni\Desktop\FitnessTracking\BackendApi\FitnessTrackingApp\UserAPI
+2025-05-14 22:54:11.332 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/swagger/index.html - null null
+2025-05-14 22:54:11.681 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/swagger/index.html - 200 null text/html;charset=utf-8 359.3348ms
+2025-05-14 22:54:11.691 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/_vs/browserLink - null null
+2025-05-14 22:54:11.691 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-14 22:54:11.695 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 5.2744ms
+2025-05-14 22:54:11.735 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.4917ms
+2025-05-14 22:54:11.844 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/swagger/v1/swagger.json - null null
+2025-05-14 22:54:11.859 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.1689ms
+2025-05-14 22:55:01.655 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/authentication/login - null null
+2025-05-14 22:55:01.661 +05:30 [INF] CORS policy execution successful.
+2025-05-14 22:55:01.664 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/authentication/login - 204 null null 8.8533ms
+2025-05-14 22:55:01.666 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5227/api/authentication/login - application/json 56
+2025-05-14 22:55:01.667 +05:30 [INF] CORS policy execution successful.
+2025-05-14 22:55:01.694 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-05-14 22:55:01.701 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.AuthenticationController.Login (UserAPI)'
+2025-05-14 22:55:01.746 +05:30 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(UserAPI.Models.DTOs.LoginUserDto) on controller UserAPI.Controllers.AuthenticationController (UserAPI).
+2025-05-14 22:55:05.517 +05:30 [INF] Executed DbCommand (262ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[createdAt], [u].[email], [u].[fitnessGoal], [u].[IsActive], [u].[OtpCode], [u].[OtpExpiry], [u].[passwordHash], [u].[ProfileUrl], [u].[role], [u].[userName]
+FROM [Users] AS [u]
+WHERE [u].[userName] = @__username_0
+2025-05-14 22:55:06.247 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-14 22:55:06.269 +05:30 [INF] Executed action UserAPI.Controllers.AuthenticationController.Login (UserAPI) in 4516.3959ms
+2025-05-14 22:55:06.271 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.AuthenticationController.Login (UserAPI)'
+2025-05-14 22:55:06.287 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5227/api/authentication/login - 401 null application/json; charset=utf-8 4620.9383ms
+2025-05-14 22:55:16.120 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/authentication/login - null null
+2025-05-14 22:55:16.120 +05:30 [INF] CORS policy execution successful.
+2025-05-14 22:55:16.121 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/authentication/login - 204 null null 1.6408ms
+2025-05-14 22:55:16.122 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5227/api/authentication/login - application/json 53
+2025-05-14 22:55:16.123 +05:30 [INF] CORS policy execution successful.
+2025-05-14 22:55:16.125 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.AuthenticationController.Login (UserAPI)'
+2025-05-14 22:55:16.126 +05:30 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(UserAPI.Models.DTOs.LoginUserDto) on controller UserAPI.Controllers.AuthenticationController (UserAPI).
+2025-05-14 22:55:16.159 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[createdAt], [u].[email], [u].[fitnessGoal], [u].[IsActive], [u].[OtpCode], [u].[OtpExpiry], [u].[passwordHash], [u].[ProfileUrl], [u].[role], [u].[userName]
+FROM [Users] AS [u]
+WHERE [u].[userName] = @__username_0
+2025-05-14 22:55:16.553 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-14 22:55:16.554 +05:30 [INF] Executed action UserAPI.Controllers.AuthenticationController.Login (UserAPI) in 428.0013ms
+2025-05-14 22:55:16.554 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.AuthenticationController.Login (UserAPI)'
+2025-05-14 22:55:16.555 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5227/api/authentication/login - 401 null application/json; charset=utf-8 432.3891ms
+2025-05-14 22:55:18.197 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5227/api/authentication/login - application/json 53
+2025-05-14 22:55:18.198 +05:30 [INF] CORS policy execution successful.
+2025-05-14 22:55:18.198 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.AuthenticationController.Login (UserAPI)'
+2025-05-14 22:55:18.198 +05:30 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(UserAPI.Models.DTOs.LoginUserDto) on controller UserAPI.Controllers.AuthenticationController (UserAPI).
+2025-05-14 22:55:18.267 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[createdAt], [u].[email], [u].[fitnessGoal], [u].[IsActive], [u].[OtpCode], [u].[OtpExpiry], [u].[passwordHash], [u].[ProfileUrl], [u].[role], [u].[userName]
+FROM [Users] AS [u]
+WHERE [u].[userName] = @__username_0
+2025-05-14 22:55:18.534 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-14 22:55:18.534 +05:30 [INF] Executed action UserAPI.Controllers.AuthenticationController.Login (UserAPI) in 336.0904ms
+2025-05-14 22:55:18.534 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.AuthenticationController.Login (UserAPI)'
+2025-05-14 22:55:18.535 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5227/api/authentication/login - 401 null application/json; charset=utf-8 338.5864ms
+2025-05-14 22:55:25.261 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/authentication/login - null null
+2025-05-14 22:55:25.261 +05:30 [INF] CORS policy execution successful.
+2025-05-14 22:55:25.261 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/authentication/login - 204 null null 0.5592ms
+2025-05-14 22:55:25.262 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5227/api/authentication/login - application/json 54
+2025-05-14 22:55:25.263 +05:30 [INF] CORS policy execution successful.
+2025-05-14 22:55:25.263 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.AuthenticationController.Login (UserAPI)'
+2025-05-14 22:55:25.263 +05:30 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(UserAPI.Models.DTOs.LoginUserDto) on controller UserAPI.Controllers.AuthenticationController (UserAPI).
+2025-05-14 22:55:25.273 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[createdAt], [u].[email], [u].[fitnessGoal], [u].[IsActive], [u].[OtpCode], [u].[OtpExpiry], [u].[passwordHash], [u].[ProfileUrl], [u].[role], [u].[userName]
+FROM [Users] AS [u]
+WHERE [u].[userName] = @__username_0
+2025-05-14 22:55:25.912 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-14 22:55:25.916 +05:30 [INF] Executed action UserAPI.Controllers.AuthenticationController.Login (UserAPI) in 652.6432ms
+2025-05-14 22:55:25.916 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.AuthenticationController.Login (UserAPI)'
+2025-05-14 22:55:25.916 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5227/api/authentication/login - 200 null application/json; charset=utf-8 653.5919ms
+2025-05-14 22:55:29.041 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/all-users - null null
+2025-05-14 22:55:29.042 +05:30 [INF] CORS policy execution successful.
+2025-05-14 22:55:29.042 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/all-users - 204 null null 0.5313ms
+2025-05-14 22:55:29.044 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/all-users - null null
+2025-05-14 22:55:29.044 +05:30 [INF] CORS policy execution successful.
+2025-05-14 22:55:29.092 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.GetAllUsers (UserAPI)'
+2025-05-14 22:55:29.095 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers() on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 22:55:29.370 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetAllUsers
+2025-05-14 22:55:29.381 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserAPI.Models.User, UserAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-14 22:55:29.393 +05:30 [INF] Executed action UserAPI.Controllers.UserController.GetAllUsers (UserAPI) in 297.9521ms
+2025-05-14 22:55:29.394 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.GetAllUsers (UserAPI)'
+2025-05-14 22:55:29.394 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/all-users - 200 null application/json; charset=utf-8 350.3574ms
+2025-05-14 22:55:32.424 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/all-users - null null
+2025-05-14 22:55:32.425 +05:30 [INF] CORS policy execution successful.
+2025-05-14 22:55:32.430 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.GetAllUsers (UserAPI)'
+2025-05-14 22:55:32.430 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers() on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 22:55:32.442 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetAllUsers
+2025-05-14 22:55:32.444 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserAPI.Models.User, UserAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-14 22:55:32.444 +05:30 [INF] Executed action UserAPI.Controllers.UserController.GetAllUsers (UserAPI) in 13.8183ms
+2025-05-14 22:55:32.444 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.GetAllUsers (UserAPI)'
+2025-05-14 22:55:32.445 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/all-users - 200 null application/json; charset=utf-8 20.4534ms
+2025-05-14 22:55:44.429 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5227/api/user/all-users - null null
+2025-05-14 22:55:44.429 +05:30 [INF] CORS policy execution successful.
+2025-05-14 22:55:44.429 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5227/api/user/all-users - 204 null null 0.5737ms
+2025-05-14 22:55:44.433 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5227/api/user/all-users - null null
+2025-05-14 22:55:44.434 +05:30 [INF] CORS policy execution successful.
+2025-05-14 22:55:44.436 +05:30 [INF] Executing endpoint 'UserAPI.Controllers.UserController.GetAllUsers (UserAPI)'
+2025-05-14 22:55:44.437 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers() on controller UserAPI.Controllers.UserController (UserAPI).
+2025-05-14 22:55:44.460 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetAllUsers
+2025-05-14 22:55:44.461 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserAPI.Models.User, UserAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-14 22:55:44.461 +05:30 [INF] Executed action UserAPI.Controllers.UserController.GetAllUsers (UserAPI) in 24.5749ms
+2025-05-14 22:55:44.461 +05:30 [INF] Executed endpoint 'UserAPI.Controllers.UserController.GetAllUsers (UserAPI)'
+2025-05-14 22:55:44.462 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5227/api/user/all-users - 200 null application/json; charset=utf-8 28.1496ms

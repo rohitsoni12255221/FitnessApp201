@@ -1,0 +1,45 @@
+2025-05-20 19:49:10.795 +05:30 [INF] Now listening on: http://localhost:5145
+2025-05-20 19:49:11.031 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-20 19:49:11.032 +05:30 [INF] Hosting environment: Development
+2025-05-20 19:49:11.032 +05:30 [INF] Content root path: C:\Users\rohit.soni\Desktop\FitnessTracking\BackendApi\FitnessTrackingApp\WorkoutService
+2025-05-20 19:49:11.585 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/index.html - null null
+2025-05-20 19:49:12.038 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/index.html - 200 null text/html;charset=utf-8 454.6594ms
+2025-05-20 19:49:12.054 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/swagger-ui.css - null null
+2025-05-20 19:49:12.054 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/swagger-ui-bundle.js - null null
+2025-05-20 19:49:12.054 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/swagger-ui-standalone-preset.js - null null
+2025-05-20 19:49:12.054 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-20 19:49:12.054 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_vs/browserLink - null null
+2025-05-20 19:49:12.058 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 4.1881ms
+2025-05-20 19:49:12.065 +05:30 [INF] The file /swagger-ui.css was not modified
+2025-05-20 19:49:12.065 +05:30 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2025-05-20 19:49:12.066 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/swagger-ui-standalone-preset.js - 304 null text/javascript 12.3052ms
+2025-05-20 19:49:12.066 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/swagger-ui.css - 304 null text/css 13.1998ms
+2025-05-20 19:49:12.072 +05:30 [INF] The file /swagger-ui-bundle.js was not modified
+2025-05-20 19:49:12.073 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/swagger-ui-bundle.js - 304 null text/javascript 19.8094ms
+2025-05-20 19:49:12.222 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 168.4311ms
+2025-05-20 19:49:12.448 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - null null
+2025-05-20 19:49:12.477 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 29.5091ms
+2025-05-20 19:51:06.813 +05:30 [INF] Now listening on: http://localhost:5145
+2025-05-20 19:51:07.041 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-20 19:51:07.042 +05:30 [INF] Hosting environment: Development
+2025-05-20 19:51:07.042 +05:30 [INF] Content root path: C:\Users\rohit.soni\Desktop\FitnessTracking\BackendApi\FitnessTrackingApp\WorkoutService
+2025-05-20 19:51:07.428 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/index.html - null null
+2025-05-20 19:51:07.816 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/index.html - 200 null text/html;charset=utf-8 389.1436ms
+2025-05-20 19:51:07.903 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-20 19:51:07.906 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 4.4794ms
+2025-05-20 19:51:07.919 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_vs/browserLink - null null
+2025-05-20 19:51:07.968 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.6818ms
+2025-05-20 19:51:08.036 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - null null
+2025-05-20 19:51:08.044 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.4428ms
+2025-05-20 19:52:58.296 +05:30 [INF] Now listening on: http://localhost:5145
+2025-05-20 19:52:58.567 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-20 19:52:58.568 +05:30 [INF] Hosting environment: Development
+2025-05-20 19:52:58.570 +05:30 [INF] Content root path: C:\Users\rohit.soni\Desktop\FitnessTracking\BackendApi\FitnessTrackingApp\WorkoutService
+2025-05-20 19:52:58.958 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/index.html - null null
+2025-05-20 19:52:59.344 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/index.html - 200 null text/html;charset=utf-8 388.1547ms
+2025-05-20 19:52:59.420 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-20 19:52:59.423 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 3.8743ms
+2025-05-20 19:52:59.438 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_vs/browserLink - null null
+2025-05-20 19:52:59.534 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 96.4035ms
+2025-05-20 19:52:59.616 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - null null
+2025-05-20 19:52:59.628 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.4888ms

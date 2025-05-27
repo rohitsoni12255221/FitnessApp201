@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>80fbc765-7db8-4311-b513-d1441ba0bc65</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.4.0" />
+	  <PackageReference Include="Azure.Security.KeyVault.Secrets" Version="4.7.0" />
+	  <PackageReference Include="Azure.Storage.Blobs" Version="12.24.0" />
+	  <PackageReference Include="Azure.Storage.Queues" Version="12.22.0" />
+	  <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+	  <PackageReference Include="MailKit" Version="4.12.0" />
+	  <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.23.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.1" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.1" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.1" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration.AzureKeyVault" Version="3.1.24" />
+	  <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="9.0.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+    <PackageReference Include="SendGrid" Version="9.29.3" />
+    <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.0" />
+  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Shared\Shared.csproj" />
+	</ItemGroup>
+</Project>

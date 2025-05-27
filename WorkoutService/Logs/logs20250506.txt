@@ -1,0 +1,1015 @@
+2025-05-06 00:01:13.401 +05:30 [INF] User profile is available. Using 'C:\Users\rohit.soni\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-06 00:01:14.134 +05:30 [INF] Now listening on: http://localhost:5145
+2025-05-06 00:01:14.343 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-06 00:01:14.344 +05:30 [INF] Hosting environment: Development
+2025-05-06 00:01:14.344 +05:30 [INF] Content root path: C:\Users\rohit.soni\Desktop\FitnessTracking\BackendApi\FitnessTrackingApp\WorkoutService
+2025-05-06 00:01:15.578 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/index.html - null null
+2025-05-06 00:01:16.069 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/index.html - 200 null text/html;charset=utf-8 493.3778ms
+2025-05-06 00:01:16.075 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-06 00:01:16.079 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 4.4815ms
+2025-05-06 00:01:16.126 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_vs/browserLink - null null
+2025-05-06 00:01:16.234 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 108.1533ms
+2025-05-06 00:01:16.293 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - null null
+2025-05-06 00:01:16.309 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.1717ms
+2025-05-06 00:05:08.617 +05:30 [INF] User profile is available. Using 'C:\Users\rohit.soni\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-06 00:05:09.036 +05:30 [INF] Now listening on: http://localhost:5145
+2025-05-06 00:05:09.162 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-06 00:05:09.163 +05:30 [INF] Hosting environment: Development
+2025-05-06 00:05:09.163 +05:30 [INF] Content root path: C:\Users\rohit.soni\Desktop\FitnessTracking\BackendApi\FitnessTrackingApp\WorkoutService
+2025-05-06 00:05:09.853 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/index.html - null null
+2025-05-06 00:05:10.130 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/index.html - 200 null text/html;charset=utf-8 284.5122ms
+2025-05-06 00:05:10.204 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-06 00:05:10.209 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 6.702ms
+2025-05-06 00:05:10.225 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_vs/browserLink - null null
+2025-05-06 00:05:10.281 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.8698ms
+2025-05-06 00:05:10.343 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - null null
+2025-05-06 00:05:10.354 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.5964ms
+2025-05-06 00:06:37.472 +05:30 [INF] Executed DbCommand (173ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(1 AS bit)
+2025-05-06 00:06:37.710 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Workouts] SET [IsActive] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2025-05-06 00:06:52.935 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(0 AS bit)
+2025-05-06 00:06:52.947 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Workouts] SET [IsActive] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2025-05-06 00:07:58.332 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(1 AS bit)
+2025-05-06 00:07:58.337 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Workouts] SET [IsActive] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2025-05-06 00:10:51.908 +05:30 [INF] User profile is available. Using 'C:\Users\rohit.soni\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-06 00:10:52.232 +05:30 [INF] Now listening on: http://localhost:5145
+2025-05-06 00:10:52.422 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-06 00:10:52.422 +05:30 [INF] Hosting environment: Development
+2025-05-06 00:10:52.422 +05:30 [INF] Content root path: C:\Users\rohit.soni\Desktop\FitnessTracking\BackendApi\FitnessTrackingApp\WorkoutService
+2025-05-06 00:10:52.978 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/index.html - null null
+2025-05-06 00:10:53.358 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/index.html - 200 null text/html;charset=utf-8 383.6058ms
+2025-05-06 00:10:53.376 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-06 00:10:53.382 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 7.1118ms
+2025-05-06 00:10:53.455 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_vs/browserLink - null null
+2025-05-06 00:10:53.511 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.1426ms
+2025-05-06 00:10:53.576 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - null null
+2025-05-06 00:10:53.588 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.0576ms
+2025-05-06 00:14:05.159 +05:30 [INF] Executed DbCommand (109ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(0 AS bit)
+2025-05-06 00:14:05.821 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Workouts] SET [IsActive] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2025-05-06 12:03:34.167 +05:30 [INF] User profile is available. Using 'C:\Users\rohit.soni\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-06 12:03:34.723 +05:30 [INF] Now listening on: http://localhost:5145
+2025-05-06 12:03:35.025 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-06 12:03:35.026 +05:30 [INF] Hosting environment: Development
+2025-05-06 12:03:35.026 +05:30 [INF] Content root path: C:\Users\rohit.soni\Desktop\FitnessTracking\BackendApi\FitnessTrackingApp\WorkoutService
+2025-05-06 12:03:36.273 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/index.html - null null
+2025-05-06 12:03:36.765 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/index.html - 200 null text/html;charset=utf-8 499.2766ms
+2025-05-06 12:03:36.775 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-06 12:03:36.783 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 8.4508ms
+2025-05-06 12:03:36.811 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_vs/browserLink - null null
+2025-05-06 12:03:36.917 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 106.1931ms
+2025-05-06 12:03:37.035 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - null null
+2025-05-06 12:03:37.054 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.4133ms
+2025-05-06 12:56:48.409 +05:30 [INF] User profile is available. Using 'C:\Users\rohit.soni\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-06 12:56:48.734 +05:30 [INF] Now listening on: http://localhost:5145
+2025-05-06 12:56:48.935 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-06 12:56:48.935 +05:30 [INF] Hosting environment: Development
+2025-05-06 12:56:48.936 +05:30 [INF] Content root path: C:\Users\rohit.soni\Desktop\FitnessTracking\BackendApi\FitnessTrackingApp\WorkoutService
+2025-05-06 12:56:49.235 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/index.html - null null
+2025-05-06 12:56:49.474 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/index.html - 200 null text/html;charset=utf-8 241.095ms
+2025-05-06 12:56:49.481 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-06 12:56:49.485 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 5.1496ms
+2025-05-06 12:56:49.511 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_vs/browserLink - null null
+2025-05-06 12:56:49.563 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.31ms
+2025-05-06 12:56:49.620 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - null null
+2025-05-06 12:56:49.630 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.4849ms
+2025-05-06 12:57:04.672 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/23 - null null
+2025-05-06 12:57:04.678 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-05-06 12:57:04.680 +05:30 [INF] CORS policy execution successful.
+2025-05-06 12:57:04.683 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/23 - 204 null null 11.1088ms
+2025-05-06 12:57:04.685 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/23 - null null
+2025-05-06 12:57:04.687 +05:30 [INF] CORS policy execution successful.
+2025-05-06 12:57:05.231 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/23 - 401 null null 545.4654ms
+2025-05-06 12:57:26.687 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 12:57:26.688 +05:30 [INF] CORS policy execution successful.
+2025-05-06 12:57:26.688 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 1.8099ms
+2025-05-06 12:57:26.691 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 12:57:26.692 +05:30 [INF] CORS policy execution successful.
+2025-05-06 12:57:26.855 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 12:57:26.881 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 12:57:28.228 +05:30 [INF] Executed DbCommand (57ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 12:57:28.301 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 12:57:28.315 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 1431.5097ms
+2025-05-06 12:57:28.316 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 12:57:28.323 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 1631.5613ms
+2025-05-06 12:58:10.591 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 12:58:10.594 +05:30 [INF] CORS policy execution successful.
+2025-05-06 12:58:10.594 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 6.06ms
+2025-05-06 12:58:10.597 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 12:58:10.597 +05:30 [INF] CORS policy execution successful.
+2025-05-06 12:58:10.603 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 12:58:10.606 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 12:58:10.641 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 12:58:10.642 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 12:58:10.643 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 36.5748ms
+2025-05-06 12:58:10.643 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 12:58:10.643 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 46.3613ms
+2025-05-06 12:58:19.830 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 12:58:19.830 +05:30 [INF] CORS policy execution successful.
+2025-05-06 12:58:19.831 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.6401ms
+2025-05-06 12:58:19.834 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 12:58:19.834 +05:30 [INF] CORS policy execution successful.
+2025-05-06 12:58:19.839 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 12:58:19.840 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 12:58:19.911 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 12:58:19.913 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 12:58:19.913 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 72.8747ms
+2025-05-06 12:58:19.913 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 12:58:19.913 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 79.4565ms
+2025-05-06 13:18:37.579 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(1 AS bit)
+2025-05-06 13:18:37.632 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Workouts] SET [IsActive] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2025-05-06 13:20:49.217 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 13:20:49.217 +05:30 [INF] CORS policy execution successful.
+2025-05-06 13:20:49.218 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.4609ms
+2025-05-06 13:20:49.220 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 13:20:49.221 +05:30 [INF] CORS policy execution successful.
+2025-05-06 13:20:49.222 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 13:20:49.223 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 13:20:49.228 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 13:20:49.229 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 13:20:49.229 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 6.5253ms
+2025-05-06 13:20:49.229 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 13:20:49.230 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 9.5406ms
+2025-05-06 13:20:50.348 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 13:20:50.348 +05:30 [INF] CORS policy execution successful.
+2025-05-06 13:20:50.349 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - 204 null null 0.5347ms
+2025-05-06 13:20:50.353 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 13:20:50.353 +05:30 [INF] CORS policy execution successful.
+2025-05-06 13:20:50.354 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 13:20:50.359 +05:30 [INF] Route matched with {action = "GetAll", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 13:20:50.371 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC GetAllWorkoutDetails
+2025-05-06 13:20:50.373 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 13:20:50.373 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService) in 13.8896ms
+2025-05-06 13:20:50.373 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 13:20:50.374 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - 200 null application/json; charset=utf-8 21.1171ms
+2025-05-06 13:21:13.164 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(0 AS bit)
+2025-05-06 13:21:13.167 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Workouts] SET [IsActive] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2025-05-06 13:21:16.760 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 13:21:16.761 +05:30 [INF] CORS policy execution successful.
+2025-05-06 13:21:16.761 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.5619ms
+2025-05-06 13:21:16.763 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 13:21:16.763 +05:30 [INF] CORS policy execution successful.
+2025-05-06 13:21:16.767 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 13:21:16.767 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 13:21:16.775 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 13:21:16.776 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 13:21:16.776 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 9.4858ms
+2025-05-06 13:21:16.777 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 13:21:16.777 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 14.5327ms
+2025-05-06 13:21:20.853 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 13:21:20.854 +05:30 [INF] CORS policy execution successful.
+2025-05-06 13:21:20.855 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 13:21:20.855 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 13:21:20.869 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 13:21:20.870 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 13:21:20.870 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 15.2337ms
+2025-05-06 13:21:20.873 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 13:21:20.874 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 21.6628ms
+2025-05-06 13:21:24.947 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 13:21:24.947 +05:30 [INF] CORS policy execution successful.
+2025-05-06 13:21:24.947 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - 204 null null 0.4636ms
+2025-05-06 13:21:24.949 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 13:21:24.949 +05:30 [INF] CORS policy execution successful.
+2025-05-06 13:21:24.950 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 13:21:24.950 +05:30 [INF] Route matched with {action = "GetAll", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 13:21:24.955 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC GetAllWorkoutDetails
+2025-05-06 13:21:24.956 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 13:21:24.956 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService) in 6.1533ms
+2025-05-06 13:21:24.956 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 13:21:24.956 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - 200 null application/json; charset=utf-8 7.2157ms
+2025-05-06 14:14:47.406 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:14:47.409 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:14:47.416 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 8.2605ms
+2025-05-06 14:14:47.421 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:14:47.423 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:14:47.431 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:14:47.434 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:14:47.522 +05:30 [INF] Executed DbCommand (43ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:14:47.526 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:14:47.527 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 93.3841ms
+2025-05-06 14:14:47.527 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:14:47.528 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 106.9568ms
+2025-05-06 14:14:48.827 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:14:48.827 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:14:48.828 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:14:48.828 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:14:48.835 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:14:48.836 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:14:48.836 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 8.3707ms
+2025-05-06 14:14:48.836 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:14:48.836 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 9.8726ms
+2025-05-06 14:14:51.518 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:14:51.518 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:14:51.518 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:14:51.518 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:14:51.524 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:14:51.524 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:14:51.525 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 6.1869ms
+2025-05-06 14:14:51.525 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:14:51.525 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 7.4914ms
+2025-05-06 14:14:53.727 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 14:14:53.727 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:14:53.727 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - 204 null null 0.4638ms
+2025-05-06 14:14:53.730 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 14:14:53.730 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:14:53.731 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 14:14:53.731 +05:30 [INF] Route matched with {action = "GetAll", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:14:53.739 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC GetAllWorkoutDetails
+2025-05-06 14:14:53.740 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:14:53.740 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService) in 9.0391ms
+2025-05-06 14:14:53.740 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 14:14:53.741 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - 200 null application/json; charset=utf-8 10.8648ms
+2025-05-06 14:15:26.337 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(1 AS bit)
+2025-05-06 14:15:26.343 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Workouts] SET [IsActive] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2025-05-06 14:15:34.354 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:15:34.354 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:15:34.354 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.3688ms
+2025-05-06 14:15:34.356 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:15:34.356 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:15:34.357 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:15:34.357 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:15:34.364 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:15:34.366 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:15:34.366 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 8.8123ms
+2025-05-06 14:15:34.366 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:15:34.367 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 10.4962ms
+2025-05-06 14:15:36.953 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 14:15:36.953 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:15:36.953 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - 204 null null 0.3671ms
+2025-05-06 14:15:36.955 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 14:15:36.955 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:15:36.955 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 14:15:36.955 +05:30 [INF] Route matched with {action = "GetAll", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:15:36.959 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC GetAllWorkoutDetails
+2025-05-06 14:15:36.960 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:15:36.960 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService) in 5.0761ms
+2025-05-06 14:15:36.960 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 14:15:36.960 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - 200 null application/json; charset=utf-8 5.9194ms
+2025-05-06 14:15:43.629 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:15:43.632 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:15:43.632 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 3.249ms
+2025-05-06 14:15:43.635 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:15:43.635 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:15:43.636 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:15:43.636 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:15:43.640 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:15:43.641 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:15:43.641 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 5.2332ms
+2025-05-06 14:15:43.641 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:15:43.641 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 6.7314ms
+2025-05-06 14:16:55.361 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/23 - null null
+2025-05-06 14:16:55.362 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:16:55.362 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/23 - 204 null null 0.4991ms
+2025-05-06 14:16:55.365 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/23 - null null
+2025-05-06 14:16:55.366 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:16:55.368 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:16:55.368 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:16:55.374 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:16:55.374 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:16:55.374 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 6.1369ms
+2025-05-06 14:16:55.374 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:16:55.374 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/23 - 200 null application/json; charset=utf-8 9.1484ms
+2025-05-06 14:17:11.856 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(0 AS bit)
+2025-05-06 14:17:11.861 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Workouts] SET [IsActive] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2025-05-06 14:17:18.583 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/23 - null null
+2025-05-06 14:17:18.583 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:17:18.583 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/23 - 204 null null 0.5075ms
+2025-05-06 14:17:18.586 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/23 - null null
+2025-05-06 14:17:18.587 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:17:18.588 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:17:18.588 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:17:18.593 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:17:18.599 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:17:18.599 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 11.1159ms
+2025-05-06 14:17:18.599 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:17:18.599 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/23 - 200 null application/json; charset=utf-8 13.1222ms
+2025-05-06 14:19:18.837 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:19:18.838 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:19:18.838 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.8818ms
+2025-05-06 14:19:18.841 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:19:18.841 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:19:18.843 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:19:18.843 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:19:18.849 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:19:18.849 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:19:18.850 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 6.2393ms
+2025-05-06 14:19:18.850 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:19:18.850 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 8.7858ms
+2025-05-06 14:39:10.799 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(1 AS bit)
+2025-05-06 14:39:10.846 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p3='?' (DbType = Int32), @p2='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Workouts] SET [IsActive] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+UPDATE [Workouts] SET [IsActive] = @p2
+OUTPUT 1
+WHERE [id] = @p3;
+2025-05-06 14:39:21.975 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:39:21.976 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:39:21.976 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.5855ms
+2025-05-06 14:39:21.978 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:39:21.979 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:39:21.980 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:39:21.981 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:39:21.988 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:39:21.989 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:39:21.989 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 7.9898ms
+2025-05-06 14:39:21.989 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:39:21.989 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 11.6752ms
+2025-05-06 14:39:25.222 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:39:25.222 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:39:25.223 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:39:25.223 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:39:25.235 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:39:25.235 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:39:25.236 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 13.3ms
+2025-05-06 14:39:25.236 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:39:25.236 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 14.777ms
+2025-05-06 14:39:35.924 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(0 AS bit)
+2025-05-06 14:39:35.927 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p3='?' (DbType = Int32), @p2='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Workouts] SET [IsActive] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+UPDATE [Workouts] SET [IsActive] = @p2
+OUTPUT 1
+WHERE [id] = @p3;
+2025-05-06 14:39:37.659 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:39:37.659 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:39:37.659 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.3486ms
+2025-05-06 14:39:37.662 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:39:37.662 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:39:37.663 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:39:37.663 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:39:37.671 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:39:37.673 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:39:37.673 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 9.9738ms
+2025-05-06 14:39:37.673 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:39:37.674 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 11.3473ms
+2025-05-06 14:39:50.963 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(1 AS bit)
+2025-05-06 14:39:50.966 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Workouts] SET [IsActive] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2025-05-06 14:39:51.878 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:39:51.879 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:39:51.879 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.3763ms
+2025-05-06 14:39:51.880 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:39:51.880 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:39:51.881 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:39:51.881 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:39:51.885 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:39:51.887 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:39:51.887 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 6.5445ms
+2025-05-06 14:39:51.887 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:39:51.888 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 7.376ms
+2025-05-06 14:39:58.336 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:39:58.337 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:39:58.337 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.6022ms
+2025-05-06 14:39:58.339 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:39:58.339 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:39:58.340 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:39:58.340 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:39:58.343 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:39:58.346 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:39:58.346 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 5.9699ms
+2025-05-06 14:39:58.346 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:39:58.346 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 7.1922ms
+2025-05-06 14:40:00.243 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:40:00.243 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:40:00.244 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:40:00.244 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:40:00.249 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:40:00.251 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:40:00.251 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 7.084ms
+2025-05-06 14:40:00.251 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:40:00.251 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 8.7325ms
+2025-05-06 14:40:00.987 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(0 AS bit)
+2025-05-06 14:40:00.988 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Workouts] SET [IsActive] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2025-05-06 14:40:02.057 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 14:40:02.058 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:40:02.058 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - 204 null null 0.179ms
+2025-05-06 14:40:02.060 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 14:40:02.060 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:40:02.061 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 14:40:02.061 +05:30 [INF] Route matched with {action = "GetAll", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:40:02.066 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC GetAllWorkoutDetails
+2025-05-06 14:40:02.066 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:40:02.067 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService) in 5.7317ms
+2025-05-06 14:40:02.067 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 14:40:02.067 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - 200 null application/json; charset=utf-8 6.4308ms
+2025-05-06 14:40:08.230 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:40:08.230 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:40:08.230 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.2329ms
+2025-05-06 14:40:08.232 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:40:08.232 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:40:08.232 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:40:08.232 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:40:08.235 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:40:08.236 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:40:08.237 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 4.0532ms
+2025-05-06 14:40:08.237 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:40:08.237 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 5.0298ms
+2025-05-06 14:40:09.207 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 14:40:09.209 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:40:09.209 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - 204 null null 2.4154ms
+2025-05-06 14:40:09.211 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 14:40:09.211 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:40:09.211 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 14:40:09.211 +05:30 [INF] Route matched with {action = "GetAll", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:40:09.215 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC GetAllWorkoutDetails
+2025-05-06 14:40:09.216 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:40:09.217 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService) in 5.1657ms
+2025-05-06 14:40:09.217 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 14:40:09.217 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - 200 null application/json; charset=utf-8 6.1288ms
+2025-05-06 14:40:11.025 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(1 AS bit)
+2025-05-06 14:40:11.027 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Workouts] SET [IsActive] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2025-05-06 14:40:14.333 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:40:14.333 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:40:14.334 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.2316ms
+2025-05-06 14:40:14.336 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:40:14.336 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:40:14.337 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:40:14.337 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:40:14.340 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:40:14.342 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:40:14.342 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 5.4878ms
+2025-05-06 14:40:14.342 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:40:14.343 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 6.8516ms
+2025-05-06 14:40:20.105 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:40:20.105 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:40:20.105 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.4935ms
+2025-05-06 14:40:20.107 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:40:20.107 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:40:20.108 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:40:20.108 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:40:20.113 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:40:20.114 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:40:20.114 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 6.0347ms
+2025-05-06 14:40:20.114 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:40:20.114 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 7.285ms
+2025-05-06 14:40:20.966 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:40:20.966 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:40:20.967 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:40:20.967 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:40:20.972 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:40:20.973 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:40:20.974 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 6.3978ms
+2025-05-06 14:40:20.974 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:40:20.974 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 7.7421ms
+2025-05-06 14:40:21.761 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:40:21.761 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:40:21.763 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:40:21.764 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:40:21.769 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:40:21.770 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:40:21.770 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 6.6926ms
+2025-05-06 14:40:21.770 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:40:21.771 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 9.7571ms
+2025-05-06 14:40:22.793 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:40:22.793 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:40:22.794 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:40:22.795 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:40:22.797 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:40:22.798 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:40:22.799 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 4.2574ms
+2025-05-06 14:40:22.799 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:40:22.799 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 6.3202ms
+2025-05-06 14:40:26.250 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:40:26.251 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:40:26.251 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.2825ms
+2025-05-06 14:40:26.253 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:40:26.253 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:40:26.254 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:40:26.254 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:40:26.257 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:40:26.259 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:40:26.259 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 5.5579ms
+2025-05-06 14:40:26.259 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:40:26.260 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 6.8062ms
+2025-05-06 14:40:27.606 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 14:40:27.607 +05:30 [INF] CORS policy execution successful.
+2025-05-06 14:40:27.607 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:40:27.607 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 14:40:27.611 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 14:40:27.612 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 14:40:27.613 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 5.4701ms
+2025-05-06 14:40:27.613 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 14:40:27.613 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 6.3775ms
+2025-05-06 15:08:16.998 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(1 AS bit)
+2025-05-06 15:08:36.404 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:08:36.405 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:08:36.405 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 1.2385ms
+2025-05-06 15:08:36.408 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:08:36.408 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:08:36.410 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:08:36.410 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 15:08:36.418 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 15:08:36.418 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 15:08:36.419 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 8.793ms
+2025-05-06 15:08:36.419 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:08:36.419 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 11.2215ms
+2025-05-06 15:08:38.280 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 15:08:38.280 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:08:38.280 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - 204 null null 0.2456ms
+2025-05-06 15:08:38.283 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 15:08:38.283 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:08:38.283 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 15:08:38.283 +05:30 [INF] Route matched with {action = "GetAll", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 15:08:38.287 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC GetAllWorkoutDetails
+2025-05-06 15:08:38.288 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 15:08:38.288 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService) in 4.4585ms
+2025-05-06 15:08:38.288 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 15:08:38.288 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - 200 null application/json; charset=utf-8 5.2666ms
+2025-05-06 15:08:47.115 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(1 AS bit)
+2025-05-06 15:08:47.137 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p3='?' (DbType = Int32), @p2='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Workouts] SET [IsActive] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+UPDATE [Workouts] SET [IsActive] = @p2
+OUTPUT 1
+WHERE [id] = @p3;
+2025-05-06 15:08:50.792 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:08:50.792 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:08:50.792 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.1895ms
+2025-05-06 15:08:50.794 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:08:50.794 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:08:50.794 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:08:50.794 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 15:08:50.799 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 15:08:50.800 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 15:08:50.800 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 5.8027ms
+2025-05-06 15:08:50.800 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:08:50.801 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 6.8693ms
+2025-05-06 15:08:57.182 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(0 AS bit)
+2025-05-06 15:08:57.184 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p3='?' (DbType = Int32), @p2='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Workouts] SET [IsActive] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+UPDATE [Workouts] SET [IsActive] = @p2
+OUTPUT 1
+WHERE [id] = @p3;
+2025-05-06 15:11:34.258 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(0 AS bit)
+2025-05-06 15:11:34.263 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(0 AS bit)
+2025-05-06 15:11:34.266 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Workouts] SET [IsActive] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2025-05-06 15:11:35.652 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:11:35.652 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:11:35.652 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.6368ms
+2025-05-06 15:11:35.655 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:11:35.655 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:11:35.656 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:11:35.656 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 15:11:35.663 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 15:11:35.664 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 15:11:35.664 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 7.514ms
+2025-05-06 15:11:35.664 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:11:35.664 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 9.4288ms
+2025-05-06 15:11:40.431 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:11:40.431 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:11:40.432 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:11:40.432 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 15:11:40.442 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 15:11:40.442 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 15:11:40.442 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 10.4728ms
+2025-05-06 15:11:40.442 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:11:40.443 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 11.4172ms
+2025-05-06 15:11:42.311 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:11:42.312 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:11:42.312 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.4929ms
+2025-05-06 15:11:42.315 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:11:42.315 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:11:42.315 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:11:42.316 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 15:11:42.323 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 15:11:42.324 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 15:11:42.324 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 8.2612ms
+2025-05-06 15:11:42.324 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:11:42.324 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 9.3347ms
+2025-05-06 15:11:45.492 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:11:45.492 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:11:45.492 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:11:45.492 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 15:11:45.494 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 15:11:45.497 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 15:11:45.497 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 4.65ms
+2025-05-06 15:11:45.497 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:11:45.497 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 5.5053ms
+2025-05-06 15:11:48.082 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:11:48.082 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:11:48.082 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.1533ms
+2025-05-06 15:11:48.084 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:11:48.084 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:11:48.084 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:11:48.084 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 15:11:48.088 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 15:11:48.089 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 15:11:48.089 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 4.7217ms
+2025-05-06 15:11:48.089 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:11:48.089 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 5.8448ms
+2025-05-06 15:12:59.512 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(1 AS bit)
+2025-05-06 15:14:25.496 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:14:25.496 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:14:25.496 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.4137ms
+2025-05-06 15:14:25.498 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:14:25.499 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:14:25.500 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:14:25.500 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 15:14:25.506 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 15:14:25.506 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 15:14:25.506 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 5.9079ms
+2025-05-06 15:14:25.506 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:14:25.506 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 8.0858ms
+2025-05-06 15:14:33.920 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:14:33.920 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:14:33.920 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.1869ms
+2025-05-06 15:14:33.921 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:14:33.921 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:14:33.922 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:14:33.922 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 15:14:33.926 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 15:14:33.927 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 15:14:33.927 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 4.6993ms
+2025-05-06 15:14:33.927 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:14:33.927 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 5.6066ms
+2025-05-06 15:14:34.792 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(1 AS bit)
+2025-05-06 15:14:34.795 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Workouts] SET [IsActive] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2025-05-06 15:14:35.375 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 15:14:35.375 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:14:35.375 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - 204 null null 0.1572ms
+2025-05-06 15:14:35.376 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 15:14:35.376 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:14:35.377 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 15:14:35.377 +05:30 [INF] Route matched with {action = "GetAll", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 15:14:35.382 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC GetAllWorkoutDetails
+2025-05-06 15:14:35.383 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 15:14:35.383 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService) in 5.9086ms
+2025-05-06 15:14:35.383 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 15:14:35.383 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - 200 null application/json; charset=utf-8 6.7443ms
+2025-05-06 15:14:41.272 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:14:41.272 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:14:41.272 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.2366ms
+2025-05-06 15:14:41.273 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:14:41.273 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:14:41.274 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:14:41.274 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 15:14:41.278 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 15:14:41.279 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 15:14:41.279 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 4.7634ms
+2025-05-06 15:14:41.279 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:14:41.279 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 5.7686ms
+2025-05-06 15:14:49.854 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(0 AS bit)
+2025-05-06 15:14:49.857 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Workouts] SET [IsActive] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2025-05-06 15:14:51.998 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:14:51.998 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:14:51.998 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.236ms
+2025-05-06 15:14:51.999 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:14:51.999 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:14:52.000 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:14:52.001 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 15:14:52.004 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 15:14:52.005 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 15:14:52.005 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 4.5027ms
+2025-05-06 15:14:52.005 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:14:52.005 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 6.0683ms
+2025-05-06 15:14:53.491 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 15:14:53.491 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:14:53.491 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - 204 null null 0.2383ms
+2025-05-06 15:14:53.492 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 15:14:53.492 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:14:53.493 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 15:14:53.493 +05:30 [INF] Route matched with {action = "GetAll", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 15:14:53.499 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC GetAllWorkoutDetails
+2025-05-06 15:14:53.500 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 15:14:53.500 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService) in 7.1238ms
+2025-05-06 15:14:53.500 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 15:14:53.500 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - 200 null application/json; charset=utf-8 8.0172ms
+2025-05-06 15:20:47.296 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:20:47.296 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:20:47.296 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.3322ms
+2025-05-06 15:20:47.299 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:20:47.299 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:20:47.300 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:20:47.301 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 15:20:47.338 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 15:20:47.340 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 15:20:47.340 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 39.6294ms
+2025-05-06 15:20:47.340 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:20:47.341 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 41.5252ms
+2025-05-06 15:20:53.173 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:20:53.173 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:20:53.173 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 0.2289ms
+2025-05-06 15:20:53.175 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:20:53.175 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:20:53.176 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:20:53.176 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 15:20:53.180 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 15:20:53.181 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 15:20:53.181 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 4.7731ms
+2025-05-06 15:20:53.181 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:20:53.181 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 6.0239ms
+2025-05-06 15:25:32.326 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[id], [w].[caloriesBurned], [w].[duration], [w].[exerciseType], [w].[IsActive], [w].[userId], [w].[workoutDate]
+FROM [Workouts] AS [w]
+WHERE [w].[userId] = @__userId_0 AND [w].[IsActive] = CAST(1 AS bit)
+2025-05-06 15:25:32.331 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Workouts] SET [IsActive] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2025-05-06 15:25:41.046 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/23 - null null
+2025-05-06 15:25:41.046 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:25:41.046 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/23 - 204 null null 0.246ms
+2025-05-06 15:25:41.048 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/23 - null null
+2025-05-06 15:25:41.049 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:25:41.049 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:25:41.049 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 15:25:41.054 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 15:25:41.056 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 15:25:41.056 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 6.2546ms
+2025-05-06 15:25:41.056 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:25:41.056 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/23 - 200 null application/json; charset=utf-8 7.7317ms
+2025-05-06 15:26:26.576 +05:30 [INF] User profile is available. Using 'C:\Users\rohit.soni\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-06 15:26:27.029 +05:30 [INF] Now listening on: http://localhost:5145
+2025-05-06 15:26:27.232 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-06 15:26:27.233 +05:30 [INF] Hosting environment: Development
+2025-05-06 15:26:27.233 +05:30 [INF] Content root path: C:\Users\rohit.soni\Desktop\FitnessTracking\BackendApi\FitnessTrackingApp\WorkoutService
+2025-05-06 15:26:27.886 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/index.html - null null
+2025-05-06 15:26:28.498 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/index.html - 200 null text/html;charset=utf-8 611.5031ms
+2025-05-06 15:26:28.512 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_vs/browserLink - null null
+2025-05-06 15:26:28.512 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-06 15:26:28.518 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 5.391ms
+2025-05-06 15:26:28.628 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 117.607ms
+2025-05-06 15:26:28.757 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - null null
+2025-05-06 15:26:28.771 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.9765ms
+2025-05-06 15:35:18.469 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:35:18.478 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-05-06 15:35:18.481 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:35:18.484 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 15.5566ms
+2025-05-06 15:35:18.487 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:35:18.490 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:35:18.663 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:35:18.690 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 15:35:19.803 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 15:35:19.865 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 15:35:19.879 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 1186.7749ms
+2025-05-06 15:35:19.879 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:35:19.885 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 1397.9157ms
+2025-05-06 15:37:37.287 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:37:37.288 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:37:37.289 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 1.6289ms
+2025-05-06 15:37:37.290 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 15:37:37.290 +05:30 [INF] CORS policy execution successful.
+2025-05-06 15:37:37.295 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:37:37.295 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 15:37:37.321 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 15:37:37.322 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 15:37:37.323 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 27.8751ms
+2025-05-06 15:37:37.323 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 15:37:37.323 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 33.2148ms
+2025-05-06 16:26:34.443 +05:30 [INF] User profile is available. Using 'C:\Users\rohit.soni\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-06 16:26:35.101 +05:30 [INF] Now listening on: http://localhost:5145
+2025-05-06 16:26:35.243 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-06 16:26:35.243 +05:30 [INF] Hosting environment: Development
+2025-05-06 16:26:35.244 +05:30 [INF] Content root path: C:\Users\rohit.soni\Desktop\FitnessTracking\BackendApi\FitnessTrackingApp\WorkoutService
+2025-05-06 16:26:35.694 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/index.html - null null
+2025-05-06 16:26:36.313 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/index.html - 200 null text/html;charset=utf-8 617.4045ms
+2025-05-06 16:26:36.377 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-06 16:26:36.382 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 6.4883ms
+2025-05-06 16:26:36.413 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_vs/browserLink - null null
+2025-05-06 16:26:36.674 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 260.4374ms
+2025-05-06 16:26:36.956 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - null null
+2025-05-06 16:26:36.985 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 29.3527ms
+2025-05-06 17:45:10.719 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 17:45:10.740 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-05-06 17:45:10.746 +05:30 [INF] CORS policy execution successful.
+2025-05-06 17:45:10.752 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 35.0682ms
+2025-05-06 17:45:10.754 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 17:45:10.757 +05:30 [INF] CORS policy execution successful.
+2025-05-06 17:45:11.176 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 17:45:11.215 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 17:45:13.504 +05:30 [INF] Executed DbCommand (118ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 17:45:13.608 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 17:45:13.648 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 2428.6105ms
+2025-05-06 17:45:13.649 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 17:45:13.661 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 2907.0104ms
+2025-05-06 17:45:17.854 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 17:45:17.856 +05:30 [INF] CORS policy execution successful.
+2025-05-06 17:45:17.856 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 204 null null 2.0058ms
+2025-05-06 17:45:17.860 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 17:45:17.860 +05:30 [INF] CORS policy execution successful.
+2025-05-06 17:45:17.872 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 17:45:17.873 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 17:45:17.901 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 17:45:17.902 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 17:45:17.903 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 30.1099ms
+2025-05-06 17:45:17.903 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 17:45:17.904 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 43.8446ms
+2025-05-06 17:45:20.515 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - null null
+2025-05-06 17:45:20.517 +05:30 [INF] CORS policy execution successful.
+2025-05-06 17:45:20.526 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 17:45:20.527 +05:30 [INF] Route matched with {action = "GetByUserId", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 17:45:20.604 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC GetWorkoutsDetailsByUserId @UserId = @p0
+2025-05-06 17:45:20.606 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 17:45:20.606 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService) in 78.7767ms
+2025-05-06 17:45:20.606 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetByUserId (WorkoutService)'
+2025-05-06 17:45:20.607 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetWorkoutDetailByUserId/8 - 200 null application/json; charset=utf-8 91.4976ms
+2025-05-06 17:45:21.928 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 17:45:21.930 +05:30 [INF] CORS policy execution successful.
+2025-05-06 17:45:21.930 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/GetAllWorkout - 204 null null 1.8059ms
+2025-05-06 17:45:21.936 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - null null
+2025-05-06 17:45:21.936 +05:30 [INF] CORS policy execution successful.
+2025-05-06 17:45:21.938 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 17:45:21.942 +05:30 [INF] Route matched with {action = "GetAll", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-06 17:45:21.956 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC GetAllWorkoutDetails
+2025-05-06 17:45:21.956 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-06 17:45:21.957 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService) in 14.533ms
+2025-05-06 17:45:21.957 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetAll (WorkoutService)'
+2025-05-06 17:45:21.957 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/GetAllWorkout - 200 null application/json; charset=utf-8 21.2656ms

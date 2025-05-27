@@ -1,0 +1,158 @@
+[
+  {
+    "ContainingType": "WorkoutService.Controllers.WorkoutController",
+    "Method": "Add",
+    "RelativePath": "api/Workout/AddWorkoutDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExerciseType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Duration",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CaloriesBurned",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WorkoutService.Controllers.WorkoutController",
+    "Method": "Delete",
+    "RelativePath": "api/Workout/DeleteWorkoutDetail/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WorkoutService.Controllers.WorkoutController",
+    "Method": "GetAll",
+    "RelativePath": "api/Workout/GetAllWorkout",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WorkoutService.Controllers.WorkoutController",
+    "Method": "Get",
+    "RelativePath": "api/Workout/GetWorkoutDetailById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WorkoutService.Controllers.WorkoutController",
+    "Method": "GetByUserId",
+    "RelativePath": "api/Workout/GetWorkoutDetailByUserId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WorkoutService.Controllers.WorkoutController",
+    "Method": "GetTodayWorkouts",
+    "RelativePath": "api/Workout/today-workouts/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WorkoutService.Controllers.WorkoutController",
+    "Method": "Update",
+    "RelativePath": "api/Workout/UpdateWorkoutDetail/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExerciseType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Duration",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CaloriesBurned",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "NewImageUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExistingImageUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

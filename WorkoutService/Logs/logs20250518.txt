@@ -1,0 +1,50 @@
+2025-05-18 18:01:19.973 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/today-workouts/8 - null null
+2025-05-18 18:01:20.215 +05:30 [INF] CORS policy execution successful.
+2025-05-18 18:01:20.228 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/today-workouts/8 - 204 null null 254.5936ms
+2025-05-18 18:01:20.266 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/today-workouts/8 - null null
+2025-05-18 18:01:20.266 +05:30 [INF] CORS policy execution successful.
+2025-05-18 18:01:20.524 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/today-workouts/8 - 401 null null 257.4332ms
+2025-05-18 18:03:23.707 +05:30 [INF] Now listening on: http://localhost:5145
+2025-05-18 18:03:23.944 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-18 18:03:23.945 +05:30 [INF] Hosting environment: Development
+2025-05-18 18:03:23.945 +05:30 [INF] Content root path: C:\Users\rohit.soni\Desktop\FitnessTracking\BackendApi\FitnessTrackingApp\WorkoutService
+2025-05-18 18:03:25.714 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/index.html - null null
+2025-05-18 18:03:26.143 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/index.html - 200 null text/html;charset=utf-8 433.7234ms
+2025-05-18 18:03:26.155 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-18 18:03:26.156 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_vs/browserLink - null null
+2025-05-18 18:03:26.159 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 5.7676ms
+2025-05-18 18:03:26.260 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 104.3571ms
+2025-05-18 18:03:26.470 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - null null
+2025-05-18 18:03:26.485 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.807ms
+2025-05-18 18:03:56.699 +05:30 [INF] Now listening on: http://localhost:5145
+2025-05-18 18:03:56.932 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-18 18:03:56.933 +05:30 [INF] Hosting environment: Development
+2025-05-18 18:03:56.933 +05:30 [INF] Content root path: C:\Users\rohit.soni\Desktop\FitnessTracking\BackendApi\FitnessTrackingApp\WorkoutService
+2025-05-18 18:03:59.322 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/index.html - null null
+2025-05-18 18:03:59.553 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/index.html - 200 null text/html;charset=utf-8 232.9985ms
+2025-05-18 18:03:59.557 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_vs/browserLink - null null
+2025-05-18 18:03:59.560 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-18 18:03:59.572 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 9.3494ms
+2025-05-18 18:03:59.648 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 92.1771ms
+2025-05-18 18:03:59.712 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - null null
+2025-05-18 18:03:59.722 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.4753ms
+2025-05-18 18:04:05.235 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/today-workouts/8 - null null
+2025-05-18 18:04:05.240 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-05-18 18:04:05.242 +05:30 [INF] CORS policy execution successful.
+2025-05-18 18:04:05.246 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/today-workouts/8 - 204 null null 10.2989ms
+2025-05-18 18:04:05.247 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/today-workouts/8 - null null
+2025-05-18 18:04:05.248 +05:30 [INF] CORS policy execution successful.
+2025-05-18 18:04:05.912 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/today-workouts/8 - 401 null null 664.6398ms
+2025-05-18 19:54:52.649 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/today-workouts/8 - null null
+2025-05-18 19:54:52.668 +05:30 [INF] CORS policy execution successful.
+2025-05-18 19:54:52.671 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5145/api/Workout/today-workouts/8 - 204 null null 23.1387ms
+2025-05-18 19:54:52.675 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5145/api/Workout/today-workouts/8 - null null
+2025-05-18 19:54:52.681 +05:30 [INF] CORS policy execution successful.
+2025-05-18 19:54:52.755 +05:30 [INF] Executing endpoint 'WorkoutService.Controllers.WorkoutController.GetTodayWorkouts (WorkoutService)'
+2025-05-18 19:54:52.833 +05:30 [INF] Route matched with {action = "GetTodayWorkouts", controller = "Workout"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodayWorkouts(Int32) on controller WorkoutService.Controllers.WorkoutController (WorkoutService).
+2025-05-18 19:54:55.567 +05:30 [INF] Executed DbCommand (201ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_GetTodayWorkoutByUserId @UserId=@p0
+2025-05-18 19:54:55.602 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WorkoutService.Models.Workout, WorkoutService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-18 19:54:55.645 +05:30 [INF] Executed action WorkoutService.Controllers.WorkoutController.GetTodayWorkouts (WorkoutService) in 2806.1925ms
+2025-05-18 19:54:55.646 +05:30 [INF] Executed endpoint 'WorkoutService.Controllers.WorkoutController.GetTodayWorkouts (WorkoutService)'
+2025-05-18 19:54:55.661 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5145/api/Workout/today-workouts/8 - 200 null application/json; charset=utf-8 2986.3587ms

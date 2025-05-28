@@ -155,7 +155,8 @@ app.UseCors("AllowWorkoutService");
 
 app.UseMiddleware<Shared.Helpers.ExceptionHandlingMiddleware>();
 app.UseRouting();
-app.MapGet("/test", () => "Hello, API is running");
+app.MapGet("/test", () => "This is a public test endpoint")
+   .AllowAnonymous();
 
 app.UseHttpsRedirection();
 

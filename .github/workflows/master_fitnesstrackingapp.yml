@@ -55,4 +55,4 @@ jobs:
           app-name: 'FitnessTrackingApp'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D545E0C2CAB64BD08B3BDA2A3FE3CBE4 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6CDECAD565CF40D9A000988AB81C261E }}

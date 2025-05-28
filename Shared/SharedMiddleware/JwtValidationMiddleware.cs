@@ -19,6 +19,7 @@ namespace Shared.SharedMiddleware
             "/api/user/reset-password",          // Forgot Password endpoint
             "/api/user/send-otp",          // Reset Password endpoint (if needed)
             "/api/user/verify-email",
+            "/test",
         };
 
         public JwtValidationMiddleware(RequestDelegate next, IConfiguration configuration)
